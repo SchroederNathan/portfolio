@@ -27,19 +27,3 @@ module.exports = {
   },
   plugins: [],
 }
-/* Nathan Schroeder. */
-
-// position: absolute;
-// width: 531px;
-// height: 168px;
-// left: 255px;
-// bottom: 518px;
-
-// font-family: 'Montserrat';
-// font-style: normal;
-// font-weight: 600;
-// font-size: 96px;
-// line-height: 84px;
-
-// color: rgba(225, 232, 240, 0.945098);
-
