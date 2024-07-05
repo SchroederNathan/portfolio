@@ -28,8 +28,11 @@ function App() {
 
   return (
     <>
-      <div className='bg-[url("/images/dotsbg.png")] bg-no-repeat fixed top-0 left-0 right-0 bottom-0'>
-        <div className="min-h-screen flex flex-row items-center overflow-hidden ">
+
+      <div className='bg-[url("/images/leftdots.png")] fixed bg-no-repeat w-full'>
+      <div className='bg-[url("/images/navdots.png")] bg-no-repeat fixed top-0 right-0 w-[33%] h-full'/>
+
+        <div className="min-h-screen flex flex-row items-center ">
           <div className="text-left ml-52 flex-1 relative">
             <p className="text-accent/75 text-2xl italic font-source-code-pro ">Hi, My Name is</p>
             <h1 className="mt-3 mb-3 font-semibold text-mtext-white  text-8xl">Nathan<br /> Schroeder.</h1>
@@ -38,15 +41,13 @@ function App() {
             {/* <img src='images/dotshero.png' className="absolute -top-32 left-0 z-0"></img> */}
 
             {/* Nav headers */}
-
             <div className='flex flex-col gap-4 mt-12'>
               {lineActive('HOME')}
               {line('ABOUT')}
               {line('EXPERIENCE')}
               {line('PROJECTS')}
-
-
             </div>
+
           </div>
           <div className='flex-1 '>
             Hello
@@ -64,6 +65,7 @@ function App() {
 
         </div>
       </div>
+      
     </>
   )
 }
