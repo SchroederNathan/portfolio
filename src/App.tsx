@@ -27,33 +27,20 @@ function App() {
   return (
     <>
       <div className="dotted-background">
-        <div className="relative isolate px-6 lg:px-8">
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 -top-74 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-72"
-          >
-            <div
-              style={{
-                clipPath:
-                  "polygon(0% 100%, 100% 100%, 100.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 60.5% 58.3%, 45.2% 34.5%, 97.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-              className="relative left-[calc(50%-10rem)]  -top-72 aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[35deg] bg-gradient-to-tr from-[#74C6FF] to-[#4a449e49] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[102.1875rem]"
-            />
+        <div className="relative isolate ">
+          <div className="absolute left-1/4 h-1/2  -translate-x-1/2 blur-[120px] xl:-top-6">
+
           </div>
 
-          {/* <div aria-hidden="true" className="absolute left-1/3 top-0 -z-10 -translate-x-1/2 blur-3xl xl:-top-6">
-        <div
-          style={{
-            clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 67.5% 30.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-          }}
-          className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#74C6FF] to-[#9089fc] opacity-30"
-        />
-      </div>   */}
-          <div className='bg-[url("/images/navdots.png")] bg-no-repeat fixed top-0 right-0 w-[33%] h-full' />
-
           <div className="min-h-screen flex flex-row items-center ">
+
             <div className="text-left ml-52 flex-1 relative">
+              {/* <div className="relative">
+                <div className="absolute top-0 -left-4 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-30 animate-blob"></div>
+                <div className="absolute top-0 left-72 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[100px] opacity-20 animate-blob animation-delay-2000"></div>
+                <div className="absolute -bottom-8 left-20 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-blob animation-delay-6000"></div>
+                <div className="absolute top-64 right-60 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-blob animation-delay-4000"></div>
+              </div> */}
               <p className="text-accent/75 text-2xl italic font-source-code-pro bg-gradient-to-tr from-sky-300 via-blue-500 to-blue-900 bg-clip-text text-transparent">
                 Hi, My Name is
               </p>
@@ -115,13 +102,22 @@ function App() {
             aria-hidden="true"
             className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           >
-            <div
-              style={{
-                clipPath:
-                  "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-              }}
-              className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#74C6FF] to-[#9189fc00] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-            />
+
+          </div>
+          <div className="absolute -top-24">
+            <div className="absolute -top-0 -left-4 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-blob"></div>
+            <div className="absolute -top-48 left-[20rem] w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-blob animation-delay-2000"></div>
+            <div className="absolute -top-12 -left-24 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-blob animation-delay-6000"></div>
+          </div>
+          <div className="absolute -top-[24rem] right-[38rem]">
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-blob"></div>
+            <div className="absolute top-48 left-72 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-blob animation-delay-2000"></div>
+            <div className="absolute top-12 -left-24 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-blob animation-delay-6000"></div>
+          </div>
+          <div className="relative float-right mr-[32rem]">
+            <div className="absolute -top-0 -left-4 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-blob"></div>
+            <div className="absolute -top-48 left-72 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-15 animate-blob animation-delay-2000"></div>
+            <div className="absolute -top-12 -left-24 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-blob animation-delay-6000"></div>
           </div>
         </div>
       </div>
