@@ -1,6 +1,6 @@
 const Socials = () => {
     return (
-        <div className="fixed bottom-0 left-0 h-full w-[100px]">
+        <div className="fixed bottom-0 left-0 h-full w-[100px] max-sm:hidden">
             <p className="absolute left-5 right-0 m-auto text-4xl font-semibold mt-6 bg-gradient-to-tr from-sky-300 via-blue-500 to-blue-900 bg-clip-text text-transparent">
                 &lt;/&gt;
             </p>
