@@ -57,7 +57,7 @@ function App() {
 
         <div className="min-h-screen flex flex-row items-center ">
           <div className="text-left ml-52 flex-1 relative">
-            <p className="text-accent/75 text-2xl italic font-source-code-pro ">Hi, My Name is</p>
+            <p className="text-accent/75 text-2xl italic font-source-code-pro bg-gradient-to-tr from-sky-300 via-blue-500 to-blue-900 bg-clip-text text-transparent">Hi, My Name is</p>
             <h1 className="mt-3 mb-3 font-semibold text-mtext-white  text-8xl">Nathan<br /> Schroeder.</h1>
             <p className="text-5xl mb-5 text-mtext-white italic font-source-code-pro">Designer/Coder.</p>
             <button className="mt-4 w-[212px] h-[64px] text-2xl  font-semibold bg-accent text-custom-dark  rounded-lg">Download CV</button>
