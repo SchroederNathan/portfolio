@@ -17,7 +17,7 @@ module.exports = {
       colors: {
         'custom-dark': '#0F172A',
         'accent': '#74C6FF',
-        'mtext-white': '#E1E8F0'
+        'mtext-white': '#E1E8F0',
       },
       cursor: {
         default: 'url(/images/cursor.png), default',
