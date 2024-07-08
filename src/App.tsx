@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { ReactTyped } from "react-typed";
 
 const lineActive = (title: string) => {
   return (
@@ -49,7 +50,9 @@ function App() {
                 <br /> Schroeder.
               </h1>
               <p className="text-5xl mb-5 text-mtext-white italic font-source-code-pro">
-                Designer/Coder.
+              <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
+
+                
               </p>
               <button className="mt-4 w-[212px] h-[64px] text-2xl  font-semibold bg-accent text-custom-dark  rounded-lg">
                 Download CV
