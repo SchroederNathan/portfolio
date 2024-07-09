@@ -22,9 +22,9 @@ const lineActive = (title: string) => {
 const line = (title: string) => {
   return (
     <a href="#">
-      <li className="flex items-center transition-all duration-300 group">
-        <span className="w-[32px] h-[0px] border-solid border border-white/40 transition-all duration-300 group-hover:border-white/60 group-hover:w-[64px]" />
-        <p className="text-white/40 font-medium ml-4 transition-all duration-300 group-hover:text-white/60">
+      <li className="flex items-center transition-all duration-300 group/nav">
+        <span className="w-[32px] h-[0px] border-solid border border-white/40 transition-all duration-300 group-hover/nav:border-white/60 group-hover/nav:w-[64px]" />
+        <p className="text-white/40 font-medium ml-4 transition-all duration-300 group-hover/nav:text-white/60">
           {title}
         </p>
       </li>
