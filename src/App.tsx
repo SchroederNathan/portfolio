@@ -62,11 +62,11 @@ function App() {
                     <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
                   </p>
                   <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-  <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
-    Download CV
-  </span>
-</button>
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
+                      Download CV
+                    </span>
+                  </button>
                   <nav className="flex flex-col gap-4 mt-16 max-sm:hidden">
                     {lineActive("HOME")}
                     {line("ABOUT")}
@@ -80,9 +80,21 @@ function App() {
 
 
               <main className="pt-24 lg:w-1/2 lg:py-24">
+
+                <p className="text-mtext-white scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">I'm a passionate software developer and UI designer with a strong background in mobile and web application development. 
+                  I specialize in creating sleek, user-friendly interfaces and robust, scalable web applications. My journey in tech 
+                  started with a love for coding and has evolved into a career where I blend technical expertise with a keen eye for design.<br/><br/>
+
+                  This portfolio is a testament to my skills and dedication. Designed in Figma and developed using Visual Studio Code, 
+                  it showcases my ability to bring projects to life from concept to deployment. Built with Vite and Tailwind CSS for an 
+                  efficient and smooth build, and deployed seamlessly on Firebase, it reflects my commitment to quality and innovation. <br/><br/>  
+
+                  Explore my work to see how I can bring innovative solutions to your projects. Whether it's crafting a stunning UI or 
+                  developing a powerful web application, I am ready to tackle new challenges and contribute to your success.</p>
+
                 <p className="text-mtext-white mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-                Designed and developed by me using {link("figma.com", "Figma")} and {link("https://code.visualstudio.com/", "Visual Studio Code")}. 
-                Built with {link("https://vitejs.dev/", "Vite")} and {link("https://tailwindcss.com/", "Tailwind CSS")}, and deployed on {link("https://firebase.google.com/", "Firebase")}.                
+                  Designed and developed by me using {link("figma.com", "Figma")} and {link("https://code.visualstudio.com/", "Visual Studio Code")}.
+                  Built with {link("https://vitejs.dev/", "Vite")} and {link("https://tailwindcss.com/", "Tailwind CSS")}, and deployed on {link("https://firebase.google.com/", "Firebase")}.
                 </p>
               </main>
             </div>
