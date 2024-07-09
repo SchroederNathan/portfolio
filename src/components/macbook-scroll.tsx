@@ -41,7 +41,7 @@ export const MacbookScroll = ({
         offset: ["start start", "end start"],
     });
 
-    const [isMobile, setIsMobile] = useState(false);2
+    const [isMobile, setIsMobile] = useState(false); 2
 
     useEffect(() => {
         if (window && window.innerWidth < 768) {
@@ -147,6 +147,7 @@ export const Lid = ({
                     }}
                     className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
                 >
+                    <img src="/images/macbackground.jpg" alt="desktop background" className="absolute rounded-lg inset-0 fill h-[90%] w-[96%] m-auto" />
                 </div>
             </div>
             <motion.div
@@ -161,13 +162,8 @@ export const Lid = ({
                 className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
             >
                 <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-                <img src={src as string} alt="aceternity logo" className="object-cover object-left-top absolute rounded-lg inset-0 fill h-full w-full" />
-                {/* <Image
-                    src={src as string}
-                    alt="aceternity logo"
-                    fill
-                    className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full"
-                /> */}
+                <img src={src as string} alt="aceternity logo" className="object-cover  object-left-top absolute rounded-lg inset-0 fill h-full w-full" />
+
             </motion.div>
         </div>
     );
