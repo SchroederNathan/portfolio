@@ -13,6 +13,7 @@
     "@tabler/icons-react": "^3.9.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.13",
+    "mini-svg-data-uri": "^1.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-typed": "^2.0.12",
