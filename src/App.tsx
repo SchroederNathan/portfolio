@@ -83,23 +83,25 @@ function App() {
     <>
       <HeroHighlight>
         <div className="w-screen h-screen overflow-y-auto scroll-smooth">
-          <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+          <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
             <div className="lg:flex lg:justify-between lg:gap-4">
               <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
                 <div className="my-auto">
                   <p className=" text-xl max-sm:text-lg italic font-source-code-pro bg-gradient-to-tr from-sky-300 via-blue-500 to-blue-900 bg-clip-text text-transparent text-left">
                     Hi, My Name is
                   </p>
-                  <h1 className="mt-3 mb-3 font-semibold text-white text-7xl max-sm:text-6xl text-left">
-                    Nathan
-                    <br /> Schroeder.
-                  </h1>
+                  <a href="#about">
+                    <h1 className="mt-3 mb-3 font-semibold text-white text-7xl max-sm:text-6xl text-left">
+                      Nathan
+                      <br /> Schroeder.
+                    </h1>
+                  </a>
                   <p className="text-4xl max-sm:text-3xl mb-5 text-white italic font-source-code-pro text-left">
                     <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
                   </p>
-                  <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
+                  <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px]">
+                    <span className="absolute inset-[-1000%] animate-[spin_4.6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bfdbfe_0%,#3b82f6_50%,#E2CBFF_100%)]" />
+                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-custom-dark px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
                       Download CV
                     </span>
                   </button>
