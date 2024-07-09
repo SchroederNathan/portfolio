@@ -1,10 +1,9 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { ReactTyped } from "react-typed";
 import Socials from "./components/Socials";
 import Background from "./components/Background";
+import { MacbookScroll } from "./components/macbook-scroll";
 
 const lineActive = (title: string) => {
   return (
@@ -35,8 +34,8 @@ function App() {
 
   return (
     <>
-      <div className="dotted-background w-screen h-screen relative isolate">
-        <div className="relative w-full h-full overflow-scroll">
+      <div className="dotted-background w-screen h-screen relative isolate ">
+        <div className="relative w-full h-full overflow-scroll overflow-x-hidden">
           <div className="min-h-screen flex flex-row max-lg:flex-wrap justify-center items-center ml-28 max-sm:ml-0 max-lg:pt-10">
             <div className=" flex flex-col items-center relative">
               <div>
@@ -64,16 +63,28 @@ function App() {
               </div>
             </div>
 
-            <div className="flex w-full h-[42rem] m-5 bg-accent/30 justify-center">
-              <p className="text-xl text-white">Hello</p>
-              <p className="text-xl text-white">Hello</p>
+            <div className="flex w-full h-[42rem] overflow-auto m-5 justify-center">
+
             </div>
           </div>
 
-          <Socials />
-          <Background />
+
         </div>
+        <Background />
+
       </div>
+      <div className="float-right w-2/3 overflow-x-hidden">
+        <MacbookScroll
+          title={
+            <span>
+              Why the fuck is this not working. <br /> No kidding.
+            </span>
+          }
+          src={`/images/Vector.png`}
+          showGradient={false}
+        />
+      </div>
+      <Socials />
     </>
   );
 }
