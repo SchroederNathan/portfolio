@@ -11,27 +11,30 @@ const sections = ["ABOUT", "EXPERIENCE", "PROJECTS"];
 
 const lineActive = (title: string) => {
   return (
-    <a href={"#" + title}>
-      <li className="flex items-center">
+
+    <li className="">
+      <a href={"#" + title} className=" w-fit flex items-center">
         <span className="w-[64px] h-[0px] border-solid border border-mtext-white/90 transition-all duration-300 ease-in-out" />
         <p className="text-mtext-white/90 font-medium ml-4 transition-all duration-300 ease-in-out">
           {title}
         </p>
-      </li>
-    </a>
+      </a>
+    </li >
+
   );
 };
 
 const line = (title: string) => {
   return (
-    <a href={"#" + title}>
-      <li className="flex items-center transition-all duration-300 ease-in-out group/nav">
+    <li className="">
+      <a href={"#" + title} className="w-fit flex items-center transition-all duration-300 ease-in-out group/nav ">
         <span className="w-[32px] h-[0px] border-solid border border-white/40 transition-all duration-300 ease-in-out group-hover/nav:border-white/60 group-hover/nav:w-[64px]" />
         <p className="text-white/40 font-medium ml-4 transition-all duration-300 ease-in-out group-hover/nav:text-white/60">
           {title}
         </p>
-      </li>
-    </a>
+      </a>
+    </li>
+
   );
 };
 
@@ -84,14 +87,14 @@ function App() {
     <>
       <HeroHighlight>
         <div className="w-screen h-screen overflow-y-auto scroll-smooth">
-          <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+          <div className="mx-auto min-h-screen max-w-screen-xl px-12 sm:ps-24 sm:pe-8 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0">
             <div className="lg:flex lg:justify-between lg:gap-4">
               <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
                 <div className="my-auto">
                   <p className=" text-xl max-sm:text-lg italic font-source-code-pro bg-gradient-to-tr from-sky-300 via-blue-500 to-blue-900 bg-clip-text text-transparent text-left">
                     Hi, My Name is
                   </p>
-                  <a href="#about">
+                  <a href="#ABOUT">
                     <h1 className="mt-3 mb-3 font-semibold text-white text-7xl max-sm:text-6xl text-left">
                       Nathan
                       <br /> Schroeder.
@@ -106,7 +109,7 @@ function App() {
                       Download CV
                     </span>
                   </button>
-                  <nav className="flex flex-col gap-4 mt-16 max-sm:hidden">
+                  <nav className="mt-16 hidden lg:block">
                     {sections.map((section) =>
                       section === activeSection ? lineActive(section) : line(section)
                     )}
@@ -118,7 +121,7 @@ function App() {
                 <section
                   id={'ABOUT'}
                   ref={(el) => (sectionRefs.current['ABOUT'] = el)}
-                  className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                  className="scroll-mt-24 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                 >
                   <p className="text-mtext-white">
                     Welcome to my portfolio! As a dedicated software developer and UI designer, I have a solid background in both mobile and web application development. I excel in creating sleek, user-friendly interfaces and building robust, scalable applications.
@@ -151,6 +154,8 @@ function App() {
                   ref={(el) => (sectionRefs.current['PROJECTS'] = el)}
                   className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                 >
+                  <p className="text-mtext-white mb-8 text-2xl font-medium">Projects</p>
+
                 </section>
 
                 <p className="text-mtext-white mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
