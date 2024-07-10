@@ -5,6 +5,7 @@ import Socials from "./components/Socials";
 import Background from "./components/Background";
 import { HeroHighlight } from "./components/highlight";
 import Education from "./components/sections/Education";
+import Work from "./components/sections/Work";
 
 const sections = ["ABOUT", "EXPERIENCE", "PROJECTS"];
 
@@ -151,6 +152,23 @@ function App() {
                   <p className="text-mtext-white mb-8 text-2xl font-medium">Experience</p>
                   <ol className="group/list">
                     <Education date={"2020 - 2024"} program={'Mobile Applications Development'} school={'St. Clair College'} link={"https://www.stclaircollege.ca/programs/mobile-applications-development"} description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. " />
+                
+                    <Work 
+                        company={"Google"}
+                        description={"I worked on the Android and Web Platforms team, focusing on improving the user experience and performance of our products. I also led the development of the Google Maps API, which has been used by millions of users worldwide."}
+                        link={"https://www.google.com"}
+                        positions={[
+                            {
+                                name: "Android Platforms Team",
+                                start: "2020",
+                                end: "2024"
+                            },
+                            {
+                                name: "Google Maps API",
+                                start: "2020",
+                                end: "2024"
+                            }
+                        ]}/>
                   </ol>
                 </section>
                 <section
