@@ -3,14 +3,14 @@ import React from 'react'
 interface Props {
     image?: string,
     name?: string,
+    company?: string,
     description?: string
     link?: string
-
     tags?: [string],
 
 }
 
-const Project = ({ image, name, description, tags, link }: Props) => {
+const Project = ({ image, name, company, description, tags, link }: Props) => {
     return (
         <li className='mb-12 group/project'>
             <a href={link} >
@@ -28,6 +28,11 @@ const Project = ({ image, name, description, tags, link }: Props) => {
                                 <path d="M8 7l9 0l0 9" />
                             </svg>
                         </p>
+                        {company ?
+                            <p className='text-mtext-white/60 font-semibold'>{company}</p>
+                            :
+                            <p className='text-mtext-white/60 font-semibold'>{company}</p>
+                        }
                         <p className='text-mtext-white mt-3'>{description}</p>
 
                     </main>
