@@ -6,6 +6,7 @@ import Background from "./components/Background";
 import { HeroHighlight } from "./components/highlight";
 import Education from "./components/sections/Education";
 import Work from "./components/sections/Work";
+import Project from "./components/sections/Project";
 
 const sections = ["ABOUT", "EXPERIENCE", "PROJECTS"];
 
@@ -155,7 +156,16 @@ function App() {
                   className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                 >
                   <p className="text-mtext-white mb-8 text-2xl font-medium">Projects</p>
+                  <ol className="group/list">
 
+                    <Project
+                      image={"images/footcare2you.jpg"}
+                      name={"Footcare2You"}
+                      description={"A freelanced web app for a medical foot service provider. Featuring a contact form, Google Map, and detailed service info, it showcases my skills in modern web design and development using Figma and React."}
+                      tags={["tag1", "tag2"]}
+                      link={"https://www.footcare2you.ca"}
+                      />
+                  </ol>
                 </section>
 
                 <p className="text-mtext-white mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
