@@ -121,28 +121,13 @@ function App() {
                   className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                 >
                   <p className="text-mtext-white">
-                    I'm a passionate software developer and UI designer with a
-                    strong background in mobile and web application development.
-                    I specialize in creating sleek, user-friendly interfaces and
-                    robust, scalable web applications. My journey in tech
-                    started with a love for coding and has evolved into a career
-                    where I blend technical expertise with a keen eye for
-                    design.
-                    <br />
-                    <br />
-                    This portfolio is a testament to my skills and dedication.
-                    Designed in Figma and developed using Visual Studio Code, it
-                    showcases my ability to bring projects to life from concept
-                    to deployment. Built with Vite and Tailwind CSS for an
-                    efficient and smooth build, and deployed seamlessly on
-                    Firebase, it reflects my commitment to quality and
-                    innovation. <br />
-                    <br />
-                    Explore my work to see how I can bring innovative solutions
-                    to your projects. Whether it's crafting a stunning UI or
-                    developing a powerful web application, I am ready to tackle
-                    new challenges and contribute to your success.
+                    Welcome to my portfolio! As a dedicated software developer and UI designer, I have a solid background in both mobile and web application development. I excel in creating sleek, user-friendly interfaces and building robust, scalable applications.
+                    <br /><br />
+                    This portfolio highlights my expertise in bringing projects to life from concept to deployment. From the initial design phase using tools like Figma to the development phase utilizing various front-end frameworks and building APIs on the back-end, it showcases my commitment to quality and innovation.
+                    <br /><br />
+                    Explore my work to discover how I can provide innovative solutions for your projects. Whether it's designing a stunning UI or developing a powerful web application, I am eager to tackle new challenges and contribute to your success.
                   </p>
+
                 </section>
                 <section
                   id={'EXPERIENCE'}
@@ -152,13 +137,13 @@ function App() {
                   <p className="text-mtext-white mb-8 text-2xl font-medium">Experience</p>
                   <ol className="group/list">
                     <Education date={"2020 - 2024"} program={'Mobile Applications Development'} school={'St. Clair College'} link={"https://www.stclaircollege.ca/programs/mobile-applications-development"} description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. " />
-                
-                    <Work 
-                        date={"2019 - 2024"}
-                        position={"Assistant Manager"}
-                        company={"Imagine Cinemas"}
-                        description={"I have successfully led and managed a team with efficiency and cooperation, demonstrating strong skills in communication, organization, management, and leadership to foster a positive environment for a theatre team. Furthermore, I thrive in fast-paced environments, ensuring effective performance under pressure."}
-                        link={"https://imaginecinemas.com/"}/>
+
+                    <Work
+                      date={"2019 - 2024"}
+                      position={"Assistant Manager"}
+                      company={"Imagine Cinemas"}
+                      description={"I have successfully led and managed a team with efficiency and cooperation, demonstrating strong skills in communication, organization, management, and leadership to foster a positive environment for a theatre team. Furthermore, I thrive in fast-paced environments, ensuring effective performance under pressure."}
+                      link={"https://imaginecinemas.com/"} />
                   </ol>
                 </section>
                 <section
