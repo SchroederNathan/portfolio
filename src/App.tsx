@@ -87,7 +87,7 @@ function App() {
     <>
       <HeroHighlight>
         <div className="w-screen h-screen overflow-y-auto scroll-smooth">
-          <div className="mx-auto min-h-screen max-w-screen-xl px-12 py-24 sm:ps-24 sm:pe-8 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0">
+          <div className="mx-auto min-h-screen max-w-screen-xl px-12 py-24 sm:ps-28 sm:pe-12 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0">
             <div className="lg:flex lg:justify-between lg:gap-4">
               <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
                 <div className="my-auto">
@@ -103,7 +103,7 @@ function App() {
                   <p className="text-4xl max-sm:text-3xl mb-5 text-white italic font-source-code-pro text-left">
                     <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
                   </p>
-                  <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px]">
+                  <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] hidden lg:block md:block">
                     <span className="absolute inset-[-1000%] animate-[spin_4.6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bfdbfe_0%,#3b82f6_50%,#E2CBFF_100%)]" />
                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-custom-dark px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
                       Download CV
@@ -117,11 +117,11 @@ function App() {
                 </div>
               </header>
 
-              <main className="pt-24 lg:w-1/2 lg:py-24">
+              <main className="pt-12 lg:pt-24 md:pt-24 lg:w-1/2 lg:py-24">
                 <section
                   id={'ABOUT'}
                   ref={(el) => (sectionRefs.current['ABOUT'] = el)}
-                  className="scroll-mt-24 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                  className="scroll-mt-24  mb-12 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                 >
                   <p className="text-mtext-white">
                     Welcome to my portfolio! As a dedicated software developer and UI designer, I have a solid background in both mobile and web application development. I excel in creating sleek, user-friendly interfaces and building robust, scalable applications.
