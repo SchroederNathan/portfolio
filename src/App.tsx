@@ -150,7 +150,7 @@ function App() {
                 >
                   <p className="text-mtext-white mb-8 text-2xl font-medium">Experience</p>
                   <ol className="group/list">
-                    <Education date={"2020 - 2024"} program={'Mobile Applications Development'} school={'St. Clair College'} description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. " />
+                    <Education date={"2020 - 2024"} program={'Mobile Applications Development'} school={'St. Clair College'} link={"https://www.stclaircollege.ca/programs/mobile-applications-development"} description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. " />
                   </ol>
                 </section>
                 <section
