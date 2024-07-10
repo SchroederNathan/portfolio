@@ -3,14 +3,14 @@ import "./App.css";
 import { ReactTyped } from "react-typed";
 import Socials from "./components/Socials";
 import Background from "./components/Background";
-import { motion } from "framer-motion";
 import { HeroHighlight } from "./components/highlight";
+import Education from "./components/sections/Education";
 
 const sections = ["ABOUT", "EXPERIENCE", "PROJECTS"];
 
 const lineActive = (title: string) => {
   return (
-    <a href={"#" + title.toLowerCase()}>
+    <a href={"#" + title}>
       <li className="flex items-center">
         <span className="w-[64px] h-[0px] border-solid border border-mtext-white/90 transition-all duration-300 ease-in-out" />
         <p className="text-mtext-white/90 font-medium ml-4 transition-all duration-300 ease-in-out">
@@ -23,7 +23,7 @@ const lineActive = (title: string) => {
 
 const line = (title: string) => {
   return (
-    <a href={"#" + title.toLowerCase()}>
+    <a href={"#" + title}>
       <li className="flex items-center transition-all duration-300 ease-in-out group/nav">
         <span className="w-[32px] h-[0px] border-solid border border-white/40 transition-all duration-300 ease-in-out group-hover/nav:border-white/60 group-hover/nav:w-[64px]" />
         <p className="text-white/40 font-medium ml-4 transition-all duration-300 ease-in-out group-hover/nav:text-white/60">
@@ -113,39 +113,53 @@ function App() {
                 </div>
               </header>
 
-              <main className="pt-24 lg:w-1/2 lg:py-24 ">
-                {sections.map((section) => (
-                  <section
-                    key={section}
-                    id={section.toLowerCase()}
-                    ref={(el) => (sectionRefs.current[section] = el)}
-                    className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-                  >
-                    <p className="text-mtext-white">
-                      I'm a passionate software developer and UI designer with a
-                      strong background in mobile and web application development.
-                      I specialize in creating sleek, user-friendly interfaces and
-                      robust, scalable web applications. My journey in tech
-                      started with a love for coding and has evolved into a career
-                      where I blend technical expertise with a keen eye for
-                      design.
-                      <br />
-                      <br />
-                      This portfolio is a testament to my skills and dedication.
-                      Designed in Figma and developed using Visual Studio Code, it
-                      showcases my ability to bring projects to life from concept
-                      to deployment. Built with Vite and Tailwind CSS for an
-                      efficient and smooth build, and deployed seamlessly on
-                      Firebase, it reflects my commitment to quality and
-                      innovation. <br />
-                      <br />
-                      Explore my work to see how I can bring innovative solutions
-                      to your projects. Whether it's crafting a stunning UI or
-                      developing a powerful web application, I am ready to tackle
-                      new challenges and contribute to your success.
-                    </p>
-                  </section>
-                ))}
+              <main className="pt-24 lg:w-1/2 lg:py-24">
+                <section
+                  id={'ABOUT'}
+                  ref={(el) => (sectionRefs.current['ABOUT'] = el)}
+                  className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                >
+                  <p className="text-mtext-white">
+                    I'm a passionate software developer and UI designer with a
+                    strong background in mobile and web application development.
+                    I specialize in creating sleek, user-friendly interfaces and
+                    robust, scalable web applications. My journey in tech
+                    started with a love for coding and has evolved into a career
+                    where I blend technical expertise with a keen eye for
+                    design.
+                    <br />
+                    <br />
+                    This portfolio is a testament to my skills and dedication.
+                    Designed in Figma and developed using Visual Studio Code, it
+                    showcases my ability to bring projects to life from concept
+                    to deployment. Built with Vite and Tailwind CSS for an
+                    efficient and smooth build, and deployed seamlessly on
+                    Firebase, it reflects my commitment to quality and
+                    innovation. <br />
+                    <br />
+                    Explore my work to see how I can bring innovative solutions
+                    to your projects. Whether it's crafting a stunning UI or
+                    developing a powerful web application, I am ready to tackle
+                    new challenges and contribute to your success.
+                  </p>
+                </section>
+                <section
+                  id={'EXPERIENCE'}
+                  ref={(el) => (sectionRefs.current['EXPERIENCE'] = el)}
+                  className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
+                >
+                  <p className="text-mtext-white mb-8 text-2xl font-medium">Experience</p>
+                  <ol className="group/list">
+                    <Education date={"2020 - 2024"} program={'Mobile Applications Development'} school={'St. Clair College'} description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. " />
+                  </ol>
+                </section>
+                <section
+                  id={'PROJECTS'}
+                  ref={(el) => (sectionRefs.current['PROJECTS'] = el)}
+                  className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                >
+                </section>
+
                 <p className="text-mtext-white mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
                   Designed and developed by me using{" "}
                   {link("figma.com", "Figma")} and{" "}
