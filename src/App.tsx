@@ -6,52 +6,20 @@ import Background from "./components/ui/Background";
 import { HeroHighlight } from "./components/ui/highlight";
 import Education from "./components/sections/Education";
 import Work from "./components/sections/Work";
-import Project from "./components/sections/Project";
+import Project from "./components/sections/projects/Project";
 import { ContactForm } from "./components/sections/contact/ContactForm";
+import { line, lineActive, link } from "./Helpers";
+import { ProjectData } from "./components/sections/projects/ProjectData";
+import ProjectDetail from "./components/sections/projects/ProjectDetail";
 
 const sections = ["ABOUT", "EXPERIENCE", "PROJECTS", "CONTACT"];
 
-const lineActive = (title: string) => {
-  return (
 
-    <li className="">
-      <a href={"#" + title} className=" w-fit flex items-center">
-        <span className="w-[64px] h-[0px] border-solid border border-mtext-white/90 transition-all duration-300 ease-in-out" />
-        <p className="text-mtext-white/90 font-medium ml-4 transition-all duration-300 ease-in-out">
-          {title}
-        </p>
-      </a>
-    </li >
-
-  );
-};
-
-const line = (title: string) => {
-  return (
-    <li className="">
-      <a href={"#" + title} className="w-fit flex items-center transition-all duration-300 ease-in-out group/nav ">
-        <span className="w-[32px] h-[0px] border-solid border border-white/40 transition-all duration-300 ease-in-out group-hover/nav:border-white/60 group-hover/nav:w-[64px]" />
-        <p className="text-white/40 font-medium ml-4 transition-all duration-300 ease-in-out group-hover/nav:text-white/60">
-          {title}
-        </p>
-      </a>
-    </li>
-
-  );
-};
-
-const link = (url: string, title: string) => {
-  return (
-    <a
-      href={url}
-      className="font-bold transition-colors hover:bg-gradient-to-tr hover:from-sky-300 hover:via-blue-500 hover:to-blue-900 hover:bg-clip-text hover:text-transparent"
-    >
-      {title}
-    </a>
-  );
-};
 
 function App() {
+
+  const [mainContent, setMainContent] = useState(1);
+
   const [activeSection, setActiveSection] = useState("ABOUT");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
@@ -62,6 +30,7 @@ function App() {
       threshold: 1,
     };
 
+    // setMainContent("main");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -84,6 +53,8 @@ function App() {
       });
     };
   }, []);
+
+
 
   return (
     <>
@@ -120,70 +91,72 @@ function App() {
               </header>
 
               <main className="pt-12 lg:pt-24 md:pt-24 lg:w-1/2 lg:py-24">
-                <section
-                  id={'ABOUT'}
-                  ref={(el) => (sectionRefs.current['ABOUT'] = el)}
-                  className="scroll-mt-24  mb-12 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-                >
-                  <p className="text-mtext-white">
-                    Welcome to my portfolio! As a dedicated software developer and UI designer, I have a solid background in both mobile and web application development. I excel in creating sleek, user-friendly interfaces and building robust, scalable applications.
-                    <br /><br />
-                    This portfolio highlights my expertise in bringing projects to life from concept to deployment. From the initial design phase using tools like Figma to the development phase utilizing various front-end frameworks and building APIs on the back-end, it showcases my commitment to quality and innovation.
-                    <br /><br />
-                    Explore my work to discover how I can provide innovative solutions for your projects. Whether it's designing a stunning UI or developing a powerful web application, I am eager to tackle new challenges and contribute to your success.
-                  </p>
+                {mainContent == null ?
+                  <>
+                    <section
+                      id={'ABOUT'}
+                      ref={(el) => (sectionRefs.current['ABOUT'] = el)}
+                      className="scroll-mt-24  mb-12 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                    >
+                      <p className="text-mtext-white">
+                        Welcome to my portfolio! As a dedicated software developer and UI designer, I have a solid background in both mobile and web application development. I excel in creating sleek, user-friendly interfaces and building robust, scalable applications.
+                        <br /><br />
+                        This portfolio highlights my expertise in bringing projects to life from concept to deployment. From the initial design phase using tools like Figma to the development phase utilizing various front-end frameworks and building APIs on the back-end, it showcases my commitment to quality and innovation.
+                        <br /><br />
+                        Explore my work to discover how I can provide innovative solutions for your projects. Whether it's designing a stunning UI or developing a powerful web application, I am eager to tackle new challenges and contribute to your success.
+                      </p>
 
-                </section>
-                <section
-                  id={'EXPERIENCE'}
-                  ref={(el) => (sectionRefs.current['EXPERIENCE'] = el)}
-                  className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
-                >
-                  <p className="text-mtext-white mb-8 text-2xl font-medium">Experience</p>
-                  <ol className="group/list">
-                    <Education date={"2020 - 2024"} program={'Mobile Applications Development'} school={'St. Clair College'} link={"https://www.stclaircollege.ca/programs/mobile-applications-development"} description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. " />
+                    </section>
+                    <section
+                      id={'EXPERIENCE'}
+                      ref={(el) => (sectionRefs.current['EXPERIENCE'] = el)}
+                      className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
+                    >
+                      <p className="text-mtext-white mb-8 text-2xl font-medium">Experience</p>
+                      <ol className="group/list">
+                        <Education date={"2020 - 2024"} program={'Mobile Applications Development'} school={'St. Clair College'} link={"https://www.stclaircollege.ca/programs/mobile-applications-development"} description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. " />
 
-                    <Work
-                      date={"2019 - 2024"}
-                      position={"Assistant Manager"}
-                      company={"Imagine Cinemas"}
-                      description={"I have successfully led and managed a team with efficiency and cooperation, demonstrating strong skills in communication, organization, management, and leadership to foster a positive environment for a theatre team. Furthermore, I thrive in fast-paced environments, ensuring effective performance under pressure."}
-                      link={"https://imaginecinemas.com/"} />
-                  </ol>
-                </section>
-                <section
-                  id={'PROJECTS'}
-                  ref={(el) => (sectionRefs.current['PROJECTS'] = el)}
-                  className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-                >
-                  <p className="text-mtext-white mb-8 text-2xl font-medium">Projects</p>
-                  <ol className="group/list">
+                        <Work
+                          date={"2019 - 2024"}
+                          position={"Assistant Manager"}
+                          company={"Imagine Cinemas"}
+                          description={"I have successfully led and managed a team with efficiency and cooperation, demonstrating strong skills in communication, organization, management, and leadership to foster a positive environment for a theatre team. Furthermore, I thrive in fast-paced environments, ensuring effective performance under pressure."}
+                          link={"https://imaginecinemas.com/"} />
+                      </ol>
+                    </section>
+                    <section
+                      id={'PROJECTS'}
+                      ref={(el) => (sectionRefs.current['PROJECTS'] = el)}
+                      className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                    >
+                      <p className="text-mtext-white mb-8 text-2xl font-medium">Projects</p>
+                      <ol className="group/list">
+                        {
+                          ProjectData.map((project, index) =>
+                            <Project
+                              key={index}
+                              image={project.image}
+                              name={project.name}
+                              description={project.description}
+                              tags={project.tags}
+                              link={project.link}
+                            />
+                          )
+                        }
 
-                    <Project
-                      image={"images/footcare2you.jpg"}
-                      name={"Footcare2You"}
-                      description={"A freelanced web app for a medical foot service provider. Featuring a contact form, Google Map, and detailed service info, it showcases my skills in modern web design and development using Figma and React."}
-                      tags={["tag1", "tag2"]}
-                      link={"https://www.footcare2you.ca"}
-                    />
-                    <Project
-                      image={"images/footcare2you.jpg"}
-                      name={"Inventory Managment System"}
-                      company="H2M Staging"
-                      description={"I led a team of 3 to develop a web app to track inventory coming in and out of warehouses and track which homes they're in. We built the front end with Angular and an API with NodeJS, ExpressJS, Sequelize, and MySQL to manage warehouse and staged home inventory data."}
-
-                      tags={["tag1", "tag2"]}
-                      link={"https://h2mstaging.com/"}
-                    />
-                  </ol>
-                </section>
-                <section
-                  id={'CONTACT'}
-                  ref={(el) => (sectionRefs.current['CONTACT'] = el)}
-                  className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-                >
-                  <ContactForm/>
-                </section>
+                      </ol>
+                    </section>
+                    <section
+                      id={'CONTACT'}
+                      ref={(el) => (sectionRefs.current['CONTACT'] = el)}
+                      className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                    >
+                      <ContactForm />
+                    </section>
+                  </>
+                  :
+                  <ProjectDetail id={mainContent} />
+                }
 
 
                 <p className="text-mtext-white mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
