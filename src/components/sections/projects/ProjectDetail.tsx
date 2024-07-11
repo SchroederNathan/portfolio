@@ -19,9 +19,12 @@ const ProjectDetail = ({ id }: { id: number }) => {
                 :
                 null
             }
-            <p className='text-mtext-white mt-6'>{project.description ?? "Loading..."}</p>
+            <p className='text-mtext-white mt-6 whitespace-pre-wrap'>{project.description[1] ?? "Loading..."}</p>
 
-            <img className='w-full mt-6' src={project.images[0]}  />
+            <img className='w-full mt-6' src={project.images[1]}  />
+
+            {/* <p className='text-mtext-white mt-6 whitespace-pre-wrap'>{project.description[0] ?? "Loading..."}</p> */}
+
 
 
 
