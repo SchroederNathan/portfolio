@@ -2,13 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { ReactTyped } from "react-typed";
 import Socials from "./components/Socials";
-import Background from "./components/Background";
-import { HeroHighlight } from "./components/highlight";
+import Background from "./components/ui/Background";
+import { HeroHighlight } from "./components/ui/highlight";
 import Education from "./components/sections/Education";
 import Work from "./components/sections/Work";
 import Project from "./components/sections/Project";
+import { ContactForm } from "./components/sections/contact/ContactForm";
 
-const sections = ["ABOUT", "EXPERIENCE", "PROJECTS"];
+const sections = ["ABOUT", "EXPERIENCE", "PROJECTS", "CONTACT"];
 
 const lineActive = (title: string) => {
   return (
@@ -170,12 +171,20 @@ function App() {
                       name={"Inventory Managment System"}
                       company="H2M Staging"
                       description={"I led a team of 3 to develop a web app to track inventory coming in and out of warehouses and track which homes they're in. We built the front end with Angular and an API with NodeJS, ExpressJS, Sequelize, and MySQL to manage warehouse and staged home inventory data."}
-                      
+
                       tags={["tag1", "tag2"]}
                       link={"https://h2mstaging.com/"}
                     />
                   </ol>
                 </section>
+                <section
+                  id={'CONTACT'}
+                  ref={(el) => (sectionRefs.current['CONTACT'] = el)}
+                  className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                >
+                  <ContactForm/>
+                </section>
+
 
                 <p className="text-mtext-white mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
                   Designed and developed by me using{" "}
