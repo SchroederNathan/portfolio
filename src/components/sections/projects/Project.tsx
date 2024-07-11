@@ -1,19 +1,21 @@
 import React from 'react'
 
 interface Props {
+    id?: number,
     image?: string,
     name?: string,
     company?: string,
     description?: string
     link?: string
     tags?: string[],
+    onItemClick?: any,
 
 }
 
-const Project = ({ image, name, company, description, tags, link }: Props) => {
+const Project = ({ id, image, name, company, description, tags, link, onItemClick }: Props, ) => {
     return (
         <li className='mb-12 group/project'>
-            <a href={link} >
+            <a  onClick={() => onItemClick(id)} >
                 <div className='group flex flex-row flex-basis relative pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50'>
                     <div className='absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg' />
                     <header className='basis-1/4 text-mtext-white/60 z-10'>

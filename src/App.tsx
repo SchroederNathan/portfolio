@@ -54,6 +54,12 @@ function App() {
     };
   }, []);
 
+  // Callback function to handle clicks on projects
+  const handleItemClick = (id: any) => {
+    setMainContent(id);
+    console.log('Selected item:', id);
+  };
+
 
 
   return (
@@ -134,6 +140,8 @@ function App() {
                         {
                           ProjectData.map((project, index) =>
                             <Project
+                              onItemClick={handleItemClick}
+                              id={index}
                               key={index}
                               image={project.images[0]}
                               name={project.name}
