@@ -179,8 +179,8 @@ function App() {
                 }
 
 
-                <p className="text-mtext-white mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24">
-                  Designed and developed by me using{" "}
+                <p className="text-mtext-white/50 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 ">
+                  Portfolio designed and developed by me using{" "}
                   {link("figma.com", "Figma")} and{" "}
                   {link("https://code.visualstudio.com/", "Visual Studio Code")}
                   . Built with {link("https://vitejs.dev/", "Vite")} and{" "}

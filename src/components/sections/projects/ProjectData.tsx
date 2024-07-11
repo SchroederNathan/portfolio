@@ -5,7 +5,8 @@ export const ProjectData = [
         images: ["images/footcare2you.jpg"],
         name: "Footcare2You",
         description: ["A freelanced web app for a medical foot service provider. Featuring a contact form, Google Map, and detailed service info, showcasing my skills in modern web design and development using Figma and React.",
-            
+            "Footcare2You is a web app built with React to market and sell medical foot care services. I developed prototypes for the client using Figma to ensure they were happy with the end product. \n\n The app features a contact form, an Interactive Google Map using Google Maps API, and detailed information about the services provided. " + 
+            "I decided to use Mantine UI for the design for clean and efficient code and to make it accessible for any users whether on mobile or desktop."
         ],
         tags: ["tag1", "tag2"],
         link: "https://www.footcare2you.ca",
