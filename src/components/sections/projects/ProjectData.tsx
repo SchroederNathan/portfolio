@@ -4,7 +4,9 @@ export const ProjectData = [
     {
         images: ["images/footcare2you.jpg"],
         name: "Footcare2You",
-        description: ["A freelanced web app for a medical foot service provider. Featuring a contact form, Google Map, and detailed service info, showcasing my skills in modern web design and development using Figma and React."],
+        description: ["A freelanced web app for a medical foot service provider. Featuring a contact form, Google Map, and detailed service info, showcasing my skills in modern web design and development using Figma and React.",
+            
+        ],
         tags: ["tag1", "tag2"],
         link: "https://www.footcare2you.ca",
     },

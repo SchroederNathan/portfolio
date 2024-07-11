@@ -1,7 +1,7 @@
 export const lineActive = (title: string) => {
     return (
   
-      <li className="">
+      <li className="" key={title}>
         <a href={"#" + title} className=" w-fit flex items-center">
           <span className="w-[64px] h-[0px] border-solid border border-mtext-white/90 transition-all duration-300 ease-in-out" />
           <p className="text-mtext-white/90 font-medium ml-4 transition-all duration-300 ease-in-out">
@@ -15,7 +15,7 @@ export const lineActive = (title: string) => {
   
   export const line = (title: string) => {
     return (
-      <li className="">
+      <li className="" key={title}>
         <a href={"#" + title} className="w-fit flex items-center transition-all duration-300 ease-in-out group/nav ">
           <span className="w-[32px] h-[0px] border-solid border border-white/40 transition-all duration-300 ease-in-out group-hover/nav:border-white/60 group-hover/nav:w-[64px]" />
           <p className="text-white/40 font-medium ml-4 transition-all duration-300 ease-in-out group-hover/nav:text-white/60">

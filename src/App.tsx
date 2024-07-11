@@ -23,14 +23,13 @@ function App() {
   const [activeSection, setActiveSection] = useState("ABOUT");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
-  useEffect(() => {
+  function startup() {
     const options = {
       root: null,
       rootMargin: "0px",
       threshold: 1,
     };
 
-    // setMainContent("main");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -52,13 +51,26 @@ function App() {
         }
       });
     };
+  }
+
+  useEffect(() => {
+    startup();
   }, []);
+
+  //onBackClicked
+  const onBackClicked = () => {
+    setMainContent(null);
+    startup();
+    console.log('Back button clicked');
+  };
 
   // Callback function to handle clicks on projects
   const handleItemClick = (id: any) => {
     setMainContent(id);
     console.log('Selected item:', id);
   };
+
+
 
 
 
@@ -82,7 +94,7 @@ function App() {
                   <p className="text-4xl max-sm:text-3xl mb-5 text-white italic font-source-code-pro text-left">
                     <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
                   </p>
-                  <button className="relative inline-flex h-12 overflow-hidden rounded-lg p-[1px] hidden lg:block md:block">
+                  <button className="relative  h-12 overflow-hidden rounded-lg p-[1px] hidden lg:block md:block">
                     <span className="absolute inset-[-1000%] animate-[spin_4.6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bfdbfe_0%,#3b82f6_50%,#E2CBFF_100%)]" />
                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-custom-dark px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
                       Download CV
@@ -163,7 +175,7 @@ function App() {
                     </section>
                   </>
                   :
-                  <ProjectDetail id={mainContent} />
+                  <ProjectDetail id={mainContent} onBackClicked={onBackClicked} />
                 }
 
 

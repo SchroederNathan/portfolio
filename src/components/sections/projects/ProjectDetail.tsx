@@ -3,7 +3,7 @@ import VideoPlayer from './VideoPlayer'
 import { ProjectData } from './ProjectData'
 import { IconArrowLeft } from '@tabler/icons-react';
 
-const ProjectDetail = ({ id }: { id: number }) => {
+const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }) => {
     const project = ProjectData[id];
 
     useEffect(() => {
@@ -13,7 +13,7 @@ const ProjectDetail = ({ id }: { id: number }) => {
 
     return (
         <div className='md:mb-12 lg:mb-18'>
-            <a className='mb-3 flex items-center hover:cursor-pointer group/back'>
+            <a className='mb-3 flex items-center hover:cursor-pointer group/back'  onClick={() => onBackClicked()}>
                 <IconArrowLeft stroke={2} className='text-mtext-white transition-colors group-hover/back:text-mtext-white/75' />
                 <p className='text-mtext-white ml-1 transition-all duration-200 ease-in-out group-hover/back:ml-2 group-hover/back:text-mtext-white/75'>Back</p>
             </a>
