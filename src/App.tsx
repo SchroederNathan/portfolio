@@ -18,7 +18,7 @@ const sections = ["ABOUT", "EXPERIENCE", "PROJECTS", "CONTACT"];
 
 function App() {
 
-  const [mainContent, setMainContent] = useState(1);
+  const [mainContent, setMainContent] = useState(null);
 
   const [activeSection, setActiveSection] = useState("ABOUT");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
@@ -135,9 +135,9 @@ function App() {
                           ProjectData.map((project, index) =>
                             <Project
                               key={index}
-                              image={project.image}
+                              image={project.images[0]}
                               name={project.name}
-                              description={project.description}
+                              description={project.description[0]}
                               tags={project.tags}
                               link={project.link}
                             />

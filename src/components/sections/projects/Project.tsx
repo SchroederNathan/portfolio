@@ -18,7 +18,7 @@ const Project = ({ image, name, company, description, tags, link }: Props) => {
                     <div className='absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg' />
                     <header className='basis-1/4 text-mtext-white/60 z-10'>
                         {/* {date} */}
-                        <img src={image} alt={name} className="mt-1 w-full object-cover rounded border-2 border-accent/10 transition group-hover:border-accent/40 sm:order-1 sm:col-span-2 sm:translate-y-1" />
+                        <img src={image} alt={name} className="mt-1 w-full h-24 object-cover rounded border-2 border-accent/10 transition group-hover:border-accent/40 sm:order-1 sm:col-span-2 sm:translate-y-1" />
                     </header>
                     <main className='basis-3/4 z-10'>
                         <p className='text-mtext-white font-semibold flex items-center'>{name}
