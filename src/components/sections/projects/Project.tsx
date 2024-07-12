@@ -1,4 +1,3 @@
-import React from 'react'
 import TechChip from './TechChip'
 interface Props {
     id?: number,
@@ -14,7 +13,7 @@ interface Props {
 
 
 
-const Project = ({ id, image, name, company, description, tags, link, onItemClick }: Props, ) => {
+const Project = ({ id, image, name, company, description, tags, onItemClick }: Props, ) => {
     return (
         <li className='mb-12 group/project hover:cursor-pointer'>
             <a  onClick={() => onItemClick(id)} >

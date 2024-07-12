@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import VideoPlayer from './VideoPlayer'
 import { ProjectData } from './ProjectData'
 import { IconArrowLeft } from '@tabler/icons-react';

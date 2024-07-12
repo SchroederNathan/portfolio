@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const ProjectData = [
     {
         images: ["images/footcare2you.jpg"],
