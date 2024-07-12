@@ -33,14 +33,14 @@ export function ContactForm() {
                 </div>
                 <LabelInputContainer className="mb-8">
                     <Label htmlFor="message">Message</Label>
-                    <Input id="message" placeholder="Your message" type="text" />
+                    <Input id="message" placeholder="Your message" type="text"  />
                 </LabelInputContainer>
 
                 <button
                     className="bg-gradient-to-br relative group/btn from-black dark:from-mtext-white dark:to-mtext-white/70 to-neutral-600 block dark:bg-mtext-white/60 w-full text-custom-dark rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
                     type="submit"
                 >
-                    Sign up &rarr;
+                    Send Message &rarr;
                     <BottomGradient />
                 </button>
             </form>
