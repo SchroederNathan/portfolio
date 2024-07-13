@@ -12,12 +12,9 @@ import { line, lineActive, link } from "./Helpers";
 import { ProjectData } from "./components/sections/projects/ProjectData";
 import ProjectDetail from "./components/sections/projects/ProjectDetail";
 
-const sections = ["ABOUT", "EXPERIENCE", "PROJECTS", "CONTACT"];
-
-
+const sections = ["ABOUT", "PROJECTS", "EXPERIENCE", "CONTACT"];
 
 function App() {
-
   const [mainContent, setMainContent] = useState(null);
 
   const [activeSection, setActiveSection] = useState("ABOUT");
@@ -61,18 +58,14 @@ function App() {
   const onBackClicked = () => {
     setMainContent(null);
     startup();
-    console.log('Back button clicked');
+    console.log("Back button clicked");
   };
 
   // Callback function to handle clicks on projects
   const handleItemClick = (id: any) => {
     setMainContent(id);
-    console.log('Selected item:', id);
+    console.log("Selected item:", id);
   };
-
-
-
-
 
   return (
     <>
@@ -102,82 +95,114 @@ function App() {
                   </button>
                   <nav className="mt-16 hidden lg:block">
                     {sections.map((section) =>
-                      section === activeSection ? lineActive(section) : line(section)
+                      section === activeSection
+                        ? lineActive(section)
+                        : line(section)
                     )}
                   </nav>
                 </div>
               </header>
 
               <main className="pt-12 lg:pt-24 md:pt-24 lg:w-1/2 lg:py-24">
-                {mainContent == null ?
+                {mainContent == null ? (
                   <>
                     <section
-                      id={'ABOUT'}
-                      ref={(el) => (sectionRefs.current['ABOUT'] = el)}
+                      id={"ABOUT"}
+                      ref={(el) => (sectionRefs.current["ABOUT"] = el)}
                       className="scroll-mt-24  mb-12 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                     >
                       <p className="text-mtext-white">
-                        Welcome to my portfolio! As a dedicated software developer and UI designer, I have a solid background in both mobile and web application development. I excel in creating sleek, user-friendly interfaces and building robust, scalable applications.
-                        <br /><br />
-                        This portfolio highlights my expertise in bringing projects to life from concept to deployment. From the initial design phase using tools like Figma to the development phase utilizing various front-end frameworks and building APIs on the back-end, it showcases my commitment to quality and innovation.
-                        <br /><br />
-                        Explore my work to discover how I can provide innovative solutions for your projects. Whether it's designing a stunning UI or developing a powerful web application, I am eager to tackle new challenges and contribute to your success.
+                        Welcome to my portfolio! As a dedicated software
+                        developer and UI designer, I have a solid background in
+                        both mobile and web application development. I excel in
+                        creating sleek, user-friendly interfaces and building
+                        robust, scalable applications.
+                        <br />
+                        <br />
+                        This portfolio highlights my expertise in bringing
+                        projects to life from concept to deployment. From the
+                        initial design phase using tools like Figma to the
+                        development phase utilizing various front-end frameworks
+                        and building APIs on the back-end, it showcases my
+                        commitment to quality and innovation.
+                        <br />
+                        <br />
+                        Explore my work to discover how I can provide innovative
+                        solutions for your projects. Whether it's designing a
+                        stunning UI or developing a powerful web application, I
+                        am eager to tackle new challenges and contribute to your
+                        success.
                       </p>
-
                     </section>
                     <section
-                      id={'EXPERIENCE'}
-                      ref={(el) => (sectionRefs.current['EXPERIENCE'] = el)}
+                      id={"PROJECTS"}
+                      ref={(el) => (sectionRefs.current["PROJECTS"] = el)}
+                      className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+                    >
+                      <p className="text-mtext-white mb-8 text-2xl font-medium">
+                        Projects
+                      </p>
+                      <ol className="group/list">
+                        {ProjectData.map((project, index) => (
+                          <Project
+                            onItemClick={handleItemClick}
+                            id={index}
+                            key={index}
+                            image={project.images[0]}
+                            name={project.name}
+                            description={project.description[0]}
+                            tags={project.tags}
+                            link={project.link}
+                          />
+                        ))}
+                      </ol>
+                    </section>
+
+                    <section
+                      id={"EXPERIENCE"}
+                      ref={(el) => (sectionRefs.current["EXPERIENCE"] = el)}
                       className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 "
                     >
-                      <p className="text-mtext-white mb-8 text-2xl font-medium">Experience</p>
+                      <p className="text-mtext-white mb-8 text-2xl font-medium">
+                        Experience
+                      </p>
                       <ol className="group/list">
-                        <Education date={"2020 - 2024"} program={'Mobile Applications Development'} school={'St. Clair College'} link={"https://www.stclaircollege.ca/programs/mobile-applications-development"} description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. " />
+                        <Education
+                          date={"2020 - 2024"}
+                          program={"Mobile Applications Development"}
+                          school={"St. Clair College"}
+                          link={
+                            "https://www.stclaircollege.ca/programs/mobile-applications-development"
+                          }
+                          description="In this program I learned to develop, test, and deploy a variety of native mobile and web applications for multiple platforms while also designing, modeling, implementing and maintain databases within. I also learned how to design user-friendly prototypes inside these applications using tools like Figma. This program also gave me plenty of opportunity to work and lead teams to accomplish larger scale projects. "
+                        />
 
                         <Work
                           date={"2019 - 2024"}
                           position={"Assistant Manager"}
                           company={"Imagine Cinemas"}
-                          description={"I have successfully led and managed a team with efficiency and cooperation, demonstrating strong skills in communication, organization, management, and leadership to foster a positive environment for a theatre team. Furthermore, I thrive in fast-paced environments, ensuring effective performance under pressure."}
-                          link={"https://imaginecinemas.com/"} />
+                          description={
+                            "I have successfully led and managed a team with efficiency and cooperation, demonstrating strong skills in communication, organization, management, and leadership to foster a positive environment for a theatre team. Furthermore, I thrive in fast-paced environments, ensuring effective performance under pressure."
+                          }
+                          link={"https://imaginecinemas.com/"}
+                        />
                       </ol>
                     </section>
-                    <section
-                      id={'PROJECTS'}
-                      ref={(el) => (sectionRefs.current['PROJECTS'] = el)}
-                      className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
-                    >
-                      <p className="text-mtext-white mb-8 text-2xl font-medium">Projects</p>
-                      <ol className="group/list">
-                        {
-                          ProjectData.map((project, index) =>
-                            <Project
-                              onItemClick={handleItemClick}
-                              id={index}
-                              key={index}
-                              image={project.images[0]}
-                              name={project.name}
-                              description={project.description[0]}
-                              tags={project.tags}
-                              link={project.link}
-                            />
-                          )
-                        }
 
-                      </ol>
-                    </section>
                     <section
-                      id={'CONTACT'}
-                      ref={(el) => (sectionRefs.current['CONTACT'] = el)}
+                      id={"CONTACT"}
+                      ref={(el) => (sectionRefs.current["CONTACT"] = el)}
                       className="scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                     >
                       <ContactForm />
                     </section>
                   </>
-                  :
-                  <ProjectDetail id={mainContent} onBackClicked={onBackClicked} />
-                }
-
+                ) : (
+                  <ProjectDetail
+                    id={mainContent}
+                    onBackClicked={onBackClicked}
+                  />
+                )}
 
                 <p className="text-mtext-white/50 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 ">
                   Portfolio designed and developed by me using{" "}
