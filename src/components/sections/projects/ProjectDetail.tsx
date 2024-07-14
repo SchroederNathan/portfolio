@@ -3,6 +3,7 @@ import VideoPlayer from './VideoPlayer'
 import { ProjectData } from './ProjectData'
 import { IconArrowLeft } from '@tabler/icons-react';
 import TechChip from './TechChip';
+import { link } from '../../../Helpers';
 
 const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }) => {
     const project = ProjectData[id];
@@ -40,6 +41,11 @@ const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }
                 :
                 null
             }
+
+            
+
+            {project.link ? <p className='text-mtext-white'><br/>{link(project.link, "Visit Website")}</p> : null}
+
             <ul className='mt-6 mb-6 flex flex-wrap'>
                 <TechChip tags={project.tags} />
             </ul>

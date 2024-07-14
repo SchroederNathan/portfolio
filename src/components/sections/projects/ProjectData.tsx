@@ -22,6 +22,6 @@ export const ProjectData = [
             "By streamlining these processes, it enhances operational efficiency and provides valuable insights for the company's planning needs."
         ],
         tags: ["Angular", "NodeJS", "Express", "MySQL", "Sequelize", "Figma", "Heroku",  "Netlify"],
-        link: "https://h2mstaging.com/",
+        link: "",
     },
 ]
