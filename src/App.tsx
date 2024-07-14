@@ -132,24 +132,22 @@ function App() {
                       <p className="text-mtext-white">
                         Welcome to my portfolio! As a dedicated software
                         developer and UI designer, I have a solid background in
-                        both mobile and web application development. I excel in
+                        front-end development. I excel in
                         creating sleek, user-friendly interfaces and building
                         robust, scalable applications.
                         <br />
                         <br />
-                        This portfolio highlights my expertise in bringing
-                        projects to life from concept to deployment. From the
-                        initial design phase using tools like Figma to the
-                        development phase utilizing various front-end frameworks
-                        and building APIs on the back-end, it showcases my
-                        commitment to quality and innovation.
+                        I personally designed and crafted this portfolio using {link('react.dev', 'React')}
+                        , {link('https://tailwindcss.com/', 'Tailwindcss')} and {link('figma.com', 'Figma')} {" "}
+                        to showcase my ability to bring projects to life from concept to deployment.
+                        From the initial design phase to the development stage, I leverage various
+                        front-end frameworks and build APIs on the back-end, highlighting my commitment
+                        to quality and innovation.
                         <br />
                         <br />
-                        Explore my work to discover how I can provide innovative
-                        solutions for your projects. Whether it's designing a
-                        stunning UI or developing a powerful web application, I
-                        am eager to tackle new challenges and contribute to your
-                        success.
+                        Explore my work to see how I can deliver innovative solutions for your projects.
+                        Whether it's designing a stunning UI or developing a powerful web application,
+                        I am eager to tackle new challenges and contribute to your success.
                       </p>
                     </section>
                     <section
@@ -224,11 +222,11 @@ function App() {
 
                 <p className="text-mtext-white/50 mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 ">
                   Portfolio designed and developed by me using{" "}
-                  {link("figma.com", "Figma")} and{" "}
+                  {link("https://figma.com", "Figma")} and{" "}
                   {link("https://code.visualstudio.com/", "Visual Studio Code")}
-                  . Built with {link("https://vitejs.dev/", "Vite")} and{" "}
+                  . Built with {link("https://react.dev", "React")}, {link("https://www.typescriptlang.org/", "Typescript")}, {link("https://vitejs.dev/", "Vite")} and{" "}
                   {link("https://tailwindcss.com/", "Tailwind CSS")}, and
-                  deployed on {link("https://firebase.google.com/", "Firebase")}
+                  deployed on {link("https://vercel.com", "Vercel")}
                   .
                 </p>
               </main>

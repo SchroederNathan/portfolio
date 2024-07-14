@@ -6,7 +6,7 @@ export const ProjectData = [
             "Footcare2You is a web app built with React to market and sell medical foot care services. I developed prototypes for the client using Figma to ensure they were happy with the end product. \n\n The app features a contact form, an Interactive Google Map using Google Maps API, and detailed information about the services provided. " + 
             "I decided to use Mantine UI for the design for clean and efficient code and to make it accessible for any users whether on mobile or desktop."
         ],
-        tags: ["React", "Figma", "Mantine UI", "Typescript", "Vercel"],
+        tags: ["React", "Typescript", "Mantine UI", "Figma", "Vercel"],
         link: "https://www.footcare2you.ca",
     },
     {
@@ -21,7 +21,7 @@ export const ProjectData = [
             "ensuring smooth operation and interaction with the user interface. \n\n This web application offers real-time tracking of inventory movements, providing H2M Staging withaccurate data on warehouse stock and furniture distribution. " + 
             "By streamlining these processes, it enhances operational efficiency and provides valuable insights for the company's planning needs."
         ],
-        tags: ["Angular", "Figma", "NodeJS", "Express", "MySQL", "Sequelize", "Heroku", "Netlify"],
+        tags: ["Angular", "NodeJS", "Express", "MySQL", "Sequelize", "Figma", "Heroku",  "Netlify"],
         link: "https://h2mstaging.com/",
     },
 ]
