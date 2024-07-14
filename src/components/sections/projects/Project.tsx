@@ -11,9 +11,6 @@ interface Props {
 
 }
 
-
-
-
 const Project = ({ id, image, name, company, description, tags, onItemClick }: Props,) => {
 
     const handleScrollToTop = (id: number) => {

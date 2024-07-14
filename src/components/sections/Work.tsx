@@ -1,5 +1,3 @@
-import React from 'react'
-import { Position } from '../../models/Jobtree'
 interface Props {
     date?: string,
     position?: string,

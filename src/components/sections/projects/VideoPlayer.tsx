@@ -1,6 +1,3 @@
-// VideoPlayer.js
-import React from 'react';
-
 interface Props {
     videoSrc: string,
     type: string,
