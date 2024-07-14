@@ -7,12 +7,10 @@ export const HeroHighlight = ({
   children,
   className,
   containerClassName,
-  isMobile = false,
 }: {
   children: React.ReactNode;
   className?: string;
   containerClassName?: string;
-  isMobile?: boolean;
 }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
