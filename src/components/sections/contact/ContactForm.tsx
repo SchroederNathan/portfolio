@@ -10,8 +10,8 @@ export function ContactForm() {
         console.log("Form submitted");
     };
     return (
-        <div className=" w-full mx-auto rounded-none md:rounded-md p-4 md:p-8 shadow-input bg-white dark:bg-slate-800/75 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] drop-shadow-lg">
-            <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
+        <div className=" w-full mx-auto rounded-none md:rounded-md p-4 md:p-8 shadow-input bg-slate-800/75 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] drop-shadow-lg">
+            <h2 className="font-bold text-xl text-neutral-200">
                 Get in touch
             </h2>
 
@@ -32,7 +32,7 @@ export function ContactForm() {
                 </LabelInputContainer>
 
                 <button
-                    className="bg-gradient-to-br relative group/btn from-black dark:from-mtext-white dark:to-mtext-white/70 to-neutral-600 block dark:bg-mtext-white/60 w-full text-custom-dark rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+                    className="bg-gradient-to-br relative group/btn from-mtext-white to-mtext-white/70 block bg-mtext-white/60 w-full text-custom-dark rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
                     type="submit"
                 >
                     Send Message &rarr;
