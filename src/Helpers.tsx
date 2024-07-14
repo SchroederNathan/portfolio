@@ -37,13 +37,3 @@ export const link = (url: string, title: string) => {
         </a>
     );
 };
-
-
-export const ScrollToTop = () => {
-    const handleScrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth' // Optional for smooth scrolling
-        });
-    };
-};

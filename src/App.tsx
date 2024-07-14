@@ -20,44 +20,51 @@ function App() {
   const [activeSection, setActiveSection] = useState("ABOUT");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
-  function startup() {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 1,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id.toUpperCase());
-        }
-      });
-    }, options);
-
-    sections.forEach((section) => {
-      if (sectionRefs.current[section]) {
-        observer.observe(sectionRefs.current[section] as HTMLElement);
-      }
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        if (sectionRefs.current[section]) {
-          observer.unobserve(sectionRefs.current[section] as HTMLElement);
-        }
-      });
-    };
-  }
 
   useEffect(() => {
-    startup();
-  }, []);
+    let observer: IntersectionObserver;
+    if (mainContent === null) {
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 1,
+      };
+
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id.toUpperCase());
+          }
+        });
+      }, options);
+
+      sections.forEach((section) => {
+        if (sectionRefs.current[section]) {
+          observer.observe(sectionRefs.current[section] as HTMLElement);
+        }
+      });
+
+      return () => {
+        sections.forEach((section) => {
+          if (sectionRefs.current[section]) {
+            observer.unobserve(sectionRefs.current[section] as HTMLElement);
+          }
+        });
+      };
+    } else {
+      setActiveSection("PROJECT DETAIL"); // You can set any appropriate section name or identifier here
+    }
+
+    return () => {
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, [mainContent]);
 
   //onBackClicked
   const onBackClicked = () => {
     setMainContent(null);
-    startup();
     console.log("Back button clicked");
   };
 
@@ -67,19 +74,7 @@ function App() {
     console.log("Selected item:", id);
   };
 
-<<<<<<< HEAD
 
-  const handleScrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth' // Optional for smooth scrolling
-    });
-    console.log('Scrolled to top');
-  };
-
-
-=======
->>>>>>> 5b8e9d343bc6cd05ebd89bdbbdda90e5703701dd
   return (
     <>
       <HeroHighlight>
