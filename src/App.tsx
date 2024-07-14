@@ -74,6 +74,13 @@ function App() {
     console.log("Selected item:", id);
   };
 
+  // Function to handle navigation item clicks
+  const handleNavClick = (section: string) => {
+    setMainContent(null);
+    setTimeout(() => {
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    }, 100); // Adjust the timeout if necessary
+  };
 
   return (
     <>
@@ -104,8 +111,8 @@ function App() {
                   <nav className="mt-16 hidden lg:block">
                     {sections.map((section) =>
                       section === activeSection
-                        ? lineActive(section)
-                        : line(section)
+                        ? lineActive(section, () => handleNavClick(section))
+                        : line(section, () => handleNavClick(section))
                     )}
                   </nav>
                 </div>
