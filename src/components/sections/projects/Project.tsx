@@ -33,7 +33,7 @@ const Project = ({ id, image, name, company, description, tags, onItemClick }: P
                     </header>
                     <main className='basis-3/4 z-10'>
                         <p className='text-mtext-white font-semibold flex items-center'>{name}
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 ml-1 text-mtext-white hidden lg:group-hover/education:block icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 ml-1 text-mtext-white hidden lg:group-hover/project:block icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M17 7l-10 10" />
                                 <path d="M8 7l9 0l0 9" />
