@@ -17,7 +17,7 @@ const Education = ({ date, program, school, description, link }: Props) => {
                         {date}
                     </header>
                     <main className=' sm:basis-3/4 z-10'>
-                    <p className="sm:hidden block text-mtext-white/60 z-10">{date}</p>
+                    <p className="sm:hidden block text-mtext-white/60 z-10 mb-3">{date}</p>
                         <p className='text-mtext-white font-semibold flex items-center'>{program}
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 ml-1 text-mtext-white hidden lg:group-hover/education:block icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />

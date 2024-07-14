@@ -16,8 +16,8 @@ const Work = ({ date, position, company, description, link }: Props) => {
                     <header className=' basis-1/4 max-sm:hidden text-mtext-white/60 z-10'>
                         {date}
                     </header>
-                    <main className='basis-3/4 z-10'>
-                        <p className="sm:hidden block text-mtext-white/60 z-10">{date}</p>
+                    <main className='sm:basis-3/4 z-10'>
+                        <p className="sm:hidden block text-mtext-white/60 z-10  mb-3">{date}</p>
 
                         <p className='text-mtext-white font-semibold flex items-center'>{position}
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 ml-1 text-mtext-white hidden lg:group-hover/work:block icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">

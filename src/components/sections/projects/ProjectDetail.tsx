@@ -19,7 +19,7 @@ const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }
             <p className='text-mtext-white text-2xl font-medium'>{project.name ?? "Loading..."}</p>
             {project.company ?
                 <a href={project.link}>
-                    <p className='text-mtext-white/60 font-semibold'>{project.company ?? "Loading..."}</p>
+                    <p className='text-mtext-white/60 mb-6 font-semibold'>{project.company ?? "Loading..."}</p>
                 </a>
                 :
                 null
@@ -40,7 +40,7 @@ const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }
                 :
                 null
             }
-            <ul className='mt-6 flex flex-wrap'>
+            <ul className='mt-6 mb-6 flex flex-wrap'>
                 <TechChip tags={project.tags} />
             </ul>
             {/* <p className='text-mtext-white mt-6 whitespace-pre-wrap'>{project.description[0] ?? "Loading..."}</p> */}
