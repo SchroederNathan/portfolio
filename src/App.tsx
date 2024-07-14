@@ -71,7 +71,13 @@ function App() {
   };
 
 
-
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional for smooth scrolling
+    });
+    console.log('Scrolled to top');
+  };
 
 
   return (
