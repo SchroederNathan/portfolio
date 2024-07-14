@@ -7,10 +7,12 @@ export const HeroHighlight = ({
   children,
   className,
   containerClassName,
+  isMobile = false,
 }: {
   children: React.ReactNode;
   className?: string;
   containerClassName?: string;
+  isMobile?: boolean;
 }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
@@ -27,36 +29,39 @@ export const HeroHighlight = ({
     mouseY.set(clientY - top);
   }
   return (
-    <div
-      className={cn(
-        "relative h-screen flex items-center  justify-center w-full group/highlight",
-        containerClassName
-      )}
-      onMouseMove={handleMouseMove}
-    >
-      <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800/65 pointer-events-none" />
-      <motion.div
-        className="pointer-events-none bg-dot-thick-indigo-900 dark:bg-dot-thick-indigo-500 absolute inset-0 opacity-0 transition duration-300 group-hover/highlight:opacity-100"
-        style={{
-          WebkitMaskImage: useMotionTemplate`
+    <>
+      {/* <div className="h-screen w-full dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex items-center justify-center sm:hidden z-102"></div> */}
+      <div
+        className={cn(
+          "relative h-screen flex items-center justify-center w-full group/highlight",
+          containerClassName
+        )}
+        onMouseMove={handleMouseMove}
+      >
+        <div className="absolute inset-0 bg-dot-thick-neutral-300 dark:bg-dot-thick-neutral-800/65 pointer-events-none" />
+        <motion.div
+          className="pointer-events-none hidden sm:block bg-dot-thick-indigo-900 dark:bg-dot-thick-indigo-500 absolute inset-0 opacity-0 transition duration-300 group-hover/highlight:opacity-100"
+          style={{
+            WebkitMaskImage: useMotionTemplate`
             radial-gradient(
               200px circle at ${mouseX}px ${mouseY}px,
               black 0%,
               transparent 100%
             )
           `,
-          maskImage: useMotionTemplate`
+            maskImage: useMotionTemplate`
             radial-gradient(
               200px circle at ${mouseX}px ${mouseY}px,
               black 0%,
               transparent 100%
             )
           `,
-        }}
-      />
+          }}
+        />
 
-      <div className={cn("relative z-20", className)}>{children}</div>
-    </div>
+        <div className={cn("relative z-20", className)}>{children}</div>
+      </div>
+    </>
   );
 };
 
