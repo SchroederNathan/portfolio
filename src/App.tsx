@@ -52,7 +52,7 @@ function App() {
         });
       };
     } else {
-      setActiveSection("PROJECT DETAIL"); // You can set any appropriate section name or identifier here
+      setActiveSection("PROJECTS"); // You can set any appropriate section name or identifier here
     }
 
     return () => {
