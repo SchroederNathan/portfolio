@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { ReactTyped } from "react-typed";
-import Socials from "./components/Socials";
+import { Socials, SocialsHorizontal } from "./components/Socials";
 import Background from "./components/ui/Background";
 import { HeroHighlight } from "./components/ui/highlight";
 import Education from "./components/sections/Education";
@@ -52,7 +52,7 @@ function App() {
         });
       };
     } else {
-      setActiveSection("PROJECTS"); 
+      setActiveSection("PROJECTS");
     }
 
     return () => {
@@ -64,7 +64,7 @@ function App() {
 
   useEffect(() => {
     if (mainContent !== null) {
-      document.getElementById('detail')?.scrollIntoView({ behavior: "smooth"});
+      document.getElementById('detail')?.scrollIntoView({ behavior: "smooth" });
     }
   }, [mainContent]);
 
@@ -90,9 +90,9 @@ function App() {
   return (
     <>
       <HeroHighlight>
-        
+
         <div className="w-screen h-screen overflow-y-auto scroll-smooth ">
-          <div className="mx-auto min-h-screen max-w-screen-xl px-12 py-24 sm:ps-28 sm:pe-12 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0 ">
+          <div className="mx-auto min-h-screen max-w-screen-xl px-12 py-24  sm:pe-12 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0 ">
             <div className="lg:flex lg:justify-between lg:gap-4 ">
               <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
                 <div className="my-auto">
@@ -106,6 +106,7 @@ function App() {
                   <p className="text-4xl max-sm:text-3xl mb-5 text-white italic font-source-code-pro text-left">
                     <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
                   </p>
+                  <SocialsHorizontal />
                   <button className="relative  h-12 overflow-hidden rounded-lg p-[1px] hidden lg:block md:block">
                     <span className="absolute inset-[-1000%] animate-[spin_4.6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bfdbfe_0%,#3b82f6_50%,#E2CBFF_100%)]" />
                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-custom-dark px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
@@ -113,11 +114,13 @@ function App() {
                     </span>
                   </button>
                   <nav className="mt-16 hidden lg:block">
-                    {sections.map((section) =>
-                      section === activeSection
-                        ? lineActive(section, () => handleNavClick(section))
-                        : line(section, () => handleNavClick(section))
-                    )}
+                    <ol className="list-none">
+                      {sections.map((section) =>
+                        section === activeSection
+                          ? lineActive(section, () => handleNavClick(section))
+                          : line(section, () => handleNavClick(section))
+                      )}
+                    </ol>
                   </nav>
                 </div>
               </header>
@@ -186,7 +189,7 @@ function App() {
                       <p className="text-mtext-white mb-8 text-2xl font-medium">
                         Experience
                       </p>
-                      <ol className="group/list">
+                      <ol className="group/list ">
                         <Education
                           date={"2020 - 2024"}
                           program={"Mobile Applications Development"}

@@ -1,6 +1,6 @@
 export const lineActive = (title: string, handleClick: () => void) => {
     return (
-        <li className="" key={title}>
+        <li className="mb-5" key={title}>
             <a
                 href={"#" + title}
                 className="w-fit flex items-center"
@@ -17,7 +17,7 @@ export const lineActive = (title: string, handleClick: () => void) => {
 
 export const line = (title: string, handleClick: () => void) => {
     return (
-        <li className="" key={title}>
+        <li className="mb-5" key={title}>
             <a
                 href={"#" + title}
                 className="w-fit flex items-center transition-all duration-300 ease-in-out group/nav"
