@@ -25,14 +25,12 @@ const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }
             {project.video ?
                 <VideoPlayer videoSrc={project.video} type="video/mp4" />
                 :
-                <a href={project.link}>
-                    <img className='w-full mt-6 rounded-md' src={project.images[0]} />
-                </a>
+                null
             }
             <p className='text-mtext-white mt-6 whitespace-pre-wrap'>{project.description[1] ?? "Loading..."}</p>
 
-            {project.images.length > 1 ?
-                <img className='w-full mt-6' src={project.images[1]} />
+            {project.images[1] ?
+                <img className='w-full mt-6' src={project.images[0]} />
                 :
                 null
             }
