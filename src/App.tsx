@@ -108,12 +108,14 @@ function App() {
                     <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
                   </p>
                   <SocialsHorizontal />
-                  <button className="relative  h-12 overflow-hidden rounded-lg p-[1px] hidden lg:block md:block">
-                    <span className="absolute inset-[-1000%] animate-[spin_4.6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bfdbfe_0%,#3b82f6_50%,#E2CBFF_100%)]" />
-                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-custom-dark px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
-                      Download CV
-                    </span>
-                  </button>
+                  <a href="/nathan-schroeder-cv.pdf" download >
+                    <button className="relative  h-12 overflow-hidden rounded-lg p-[1px] hidden lg:block md:block">
+                      <span className="absolute inset-[-1000%] animate-[spin_4.6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bfdbfe_0%,#3b82f6_50%,#E2CBFF_100%)]" />
+                      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-custom-dark px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
+                        Download CV
+                      </span>
+                    </button>
+                  </a>
                   <nav className="mt-16 hidden lg:block">
                     <ol className="list-none">
                       {sections.map((section) =>
