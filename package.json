@@ -12,12 +12,16 @@
   "dependencies": {
     "@radix-ui/react-label": "^2.1.0",
     "@tabler/icons-react": "^3.10.0",
+    "@types/node-fetch": "^2.6.11",
+    "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.0",
     "mini-svg-data-uri": "^1.4.4",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-typed": "^2.0.12",
+    "resend": "^3.4.0",
     "tailwind-merge": "^2.4.0"
   },
   "devDependencies": {
@@ -25,6 +29,7 @@
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
+    "@vercel/node": "^3.2.2",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
