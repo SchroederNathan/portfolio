@@ -3,6 +3,7 @@ import React from "react";
 import { Label } from "./Label";
 import { Input } from "./Input";
 import { cn } from "../../../utils/cn";
+import { TextInput } from "./TextArea";
 
 export function ContactForm() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -28,7 +29,7 @@ export function ContactForm() {
                 </div>
                 <LabelInputContainer className="mb-8">
                     <Label htmlFor="message">Message</Label>
-                    <Input id="message" placeholder="Your message" type="message"  />
+                    <TextInput id="message" placeholder="Your message" type="message"  />
                 </LabelInputContainer>
 
                 <button
