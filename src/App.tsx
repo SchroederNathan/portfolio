@@ -27,7 +27,7 @@ function App() {
       const options = {
         root: null,
         rootMargin: "0px",
-        threshold: 1,
+        threshold: 1, // Adjust the threshold as needed
       };
 
       observer = new IntersectionObserver((entries) => {
@@ -52,7 +52,7 @@ function App() {
         });
       };
     } else {
-      setActiveSection("PROJECTS"); // You can set any appropriate section name or identifier here
+      setActiveSection("PROJECTS"); 
     }
 
     return () => {
@@ -60,6 +60,12 @@ function App() {
         observer.disconnect();
       }
     };
+  }, [mainContent]);
+
+  useEffect(() => {
+    if (mainContent !== null) {
+      document.getElementById('detail')?.scrollIntoView({ behavior: "smooth"});
+    }
   }, [mainContent]);
 
   //onBackClicked
@@ -71,20 +77,20 @@ function App() {
   // Callback function to handle clicks on projects
   const handleItemClick = (id: any) => {
     setMainContent(id);
+
     console.log("Selected item:", id);
   };
 
   // Function to handle navigation item clicks
   const handleNavClick = (section: string) => {
     setMainContent(null);
-    setTimeout(() => {
-      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
-    }, 100); // Adjust the timeout if necessary
+    document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <>
       <HeroHighlight>
+        
         <div className="w-screen h-screen overflow-y-auto scroll-smooth ">
           <div className="mx-auto min-h-screen max-w-screen-xl px-12 py-24 sm:ps-28 sm:pe-12 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0 ">
             <div className="lg:flex lg:justify-between lg:gap-4 ">
@@ -93,12 +99,10 @@ function App() {
                   <p className=" text-xl max-sm:text-lg italic font-source-code-pro bg-gradient-to-tr from-sky-300 via-blue-500 to-blue-900 bg-clip-text text-transparent text-left">
                     Hi, My Name is
                   </p>
-                  <a href="#ABOUT">
-                    <h1 className="mt-3 mb-3 font-semibold text-white text-7xl max-sm:text-6xl text-left">
-                      Nathan
-                      <br /> Schroeder.
-                    </h1>
-                  </a>
+                  <h1 className="mt-3 mb-3 font-semibold text-white text-7xl max-sm:text-6xl text-left">
+                    Nathan
+                    <br /> Schroeder.
+                  </h1>
                   <p className="text-4xl max-sm:text-3xl mb-5 text-white italic font-source-code-pro text-left">
                     <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
                   </p>

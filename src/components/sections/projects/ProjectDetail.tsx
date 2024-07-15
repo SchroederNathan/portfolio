@@ -8,11 +8,8 @@ import { link } from '../../../Helpers';
 const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }) => {
     const project = ProjectData[id];
 
-    useEffect(() => {
-    }, []); // Empty dependency array ensures this runs only on mount
-
     return (
-        <div className='md:mb-12 lg:mb-18'>
+        <div className='md:mb-12 lg:mb-18' id='detail'>
             <a className='mb-3 flex items-center hover:cursor-pointer group/back' onClick={() => onBackClicked()}>
                 <IconArrowLeft stroke={2} className='text-mtext-white transition-colors group-hover/back:text-mtext-white/75' />
                 <p className='text-mtext-white ml-1 transition-all duration-200 ease-in-out group-hover/back:ml-2 group-hover/back:text-mtext-white/75'>Back</p>
@@ -25,7 +22,6 @@ const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }
                 :
                 null
             }
-
 
             {project.video ?
                 <VideoPlayer videoSrc={project.video} type="video/mp4" />
@@ -42,17 +38,11 @@ const ProjectDetail = ({ id, onBackClicked }: { id: number, onBackClicked: any }
                 null
             }
 
-            
-
-            {project.link ? <p className='text-mtext-white'><br/>{link(project.link, "Visit Website")}</p> : null}
+            {project.link ? <p className='text-mtext-white'><br />{link(project.link, "Visit Website")}</p> : null}
 
             <ul className='mt-6 mb-6 flex flex-wrap'>
                 <TechChip tags={project.tags} />
             </ul>
-            {/* <p className='text-mtext-white mt-6 whitespace-pre-wrap'>{project.description[0] ?? "Loading..."}</p> */}
-
-
-
 
         </div>
     )
