@@ -8,7 +8,7 @@ export interface InputProps
     extends React.InputHTMLAttributes<HTMLTextAreaElement> { }
 
 const TextInput = React.forwardRef<HTMLTextAreaElement, InputProps>(
-    ({ className, type, ...props }, ref) => {
+    ({ className, type, ...props }) => {
         const radius = 100; // change this to increase the rdaius of the hover effect
         const [visible, setVisible] = React.useState(false);
 
