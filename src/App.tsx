@@ -11,6 +11,7 @@ import { ContactForm } from "./components/sections/contact/ContactForm";
 import { line, lineActive, link } from "./Helpers";
 import { ProjectData } from "./components/sections/projects/ProjectData";
 import ProjectDetail from "./components/sections/projects/ProjectDetail";
+import { Toaster } from "react-hot-toast";
 
 const sections = ["ABOUT", "PROJECTS", "EXPERIENCE", "CONTACT"];
 
@@ -242,6 +243,7 @@ function App() {
           <Background />
           <Socials />
         </div>
+        <Toaster />
       </HeroHighlight>
     </>
   );

@@ -6,10 +6,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const { firstname, email, message } = req.body;
 
     const data = {
-      from: 'onboarding@resend.dev', // Change to your verified sender email
-      to: 'schroedernathan2011@icloud.com', // Change to your recipient email
+      from: 'onboarding@resend.dev', 
+      to: 'schroedernathan2011@icloud.com', 
       subject: 'New Contact Form Submission',
-      text: `Name: ${firstname}\nEmail: ${email}\nMessage: ${message}`,
+      text: `Name: ${firstname}\n\nEmail: ${email}\n\nMessage: ${message}`,
     };
 
     try {
