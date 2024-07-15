@@ -10,7 +10,7 @@ export function ContactForm() {
         console.log("Form submitted");
     };
     return (
-        <div className=" w-full mx-auto rounded-none md:rounded-md p-4 md:p-8 shadow-input bg-slate-800/75 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] drop-shadow-lg">
+        <div className=" w-full mx-auto rounded-md p-4 md:p-8 shadow-input bg-slate-800/75 shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] drop-shadow-lg">
             <h2 className="font-bold text-xl text-neutral-200">
                 Get in touch
             </h2>
@@ -28,7 +28,7 @@ export function ContactForm() {
                 </div>
                 <LabelInputContainer className="mb-8">
                     <Label htmlFor="message">Message</Label>
-                    <Input id="message" placeholder="Your message" type="text"  />
+                    <Input id="message" placeholder="Your message" type="message"  />
                 </LabelInputContainer>
 
                 <button

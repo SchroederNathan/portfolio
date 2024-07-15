@@ -133,7 +133,7 @@ function App() {
                       ref={(el) => (sectionRefs.current["ABOUT"] = el)}
                       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                     >
-                      <p className="text-mtext-white mb-8 text-2xl font-medium">
+                      <p className="text-mtext-white mb-8 font-bold text-xl">
                         About
                       </p>
                       <p className="text-mtext-white">
@@ -162,7 +162,7 @@ function App() {
                       ref={(el) => (sectionRefs.current["PROJECTS"] = el)}
                       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                     >
-                      <p className="text-mtext-white mb-8 text-2xl font-medium">
+                      <p className="text-mtext-white mb-8 font-bold text-xl">
                         Projects
                       </p>
                       <ol className="group/list">
@@ -186,7 +186,7 @@ function App() {
                       ref={(el) => (sectionRefs.current["EXPERIENCE"] = el)}
                       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
                     >
-                      <p className="text-mtext-white mb-8 text-2xl font-medium">
+                      <p className="text-mtext-white mb-8 font-bold text-xl">
                         Experience
                       </p>
                       <ol className="group/list ">
