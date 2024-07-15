@@ -92,7 +92,7 @@ function App() {
       <HeroHighlight>
 
         <div className="w-screen h-screen overflow-y-auto scroll-smooth ">
-          <div className="mx-auto min-h-screen max-w-screen-xl px-12 py-24  sm:pe-12 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0 ">
+          <div className="mx-auto min-h-screen max-w-screen-xl px-12 py-24 md:ps-28 sm:pe-12 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0 ">
             <div className="lg:flex lg:justify-between lg:gap-4 ">
               <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
                 <div className="my-auto">
