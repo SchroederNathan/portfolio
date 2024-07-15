@@ -30,9 +30,6 @@ export const SocialsHorizontal = () => {
             <a href="https://instagram.com/nathanschroederr" className="ml-6">
                 <img src="images/instagram.svg" className="m-auto" />
             </a>
-            <a href="https://discord.com/users/428660539623866399" className="ml-6">
-                <img src="images/discord.svg" className="m-auto" />
-            </a>
         </div>
     )
 }
