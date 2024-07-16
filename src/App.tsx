@@ -12,6 +12,7 @@ import { line, lineActive, link } from "./Helpers";
 import { ProjectData } from "./components/sections/projects/ProjectData";
 import ProjectDetail from "./components/sections/projects/ProjectDetail";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/react"
 
 const sections = ["ABOUT", "PROJECTS", "EXPERIENCE", "CONTACT"];
 
@@ -246,6 +247,7 @@ function App() {
           <Socials />
         </div>
         <Toaster />
+        <Analytics />
       </HeroHighlight>
     </>
   );
