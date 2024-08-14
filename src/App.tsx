@@ -179,7 +179,7 @@ function App() {
                             name={project.name}
                             description={project.description[0]}
                             tags={project.tags}
-                            link={project.link}
+                            link={project.link[0]}
                           />
                         ))}
                       </ol>
