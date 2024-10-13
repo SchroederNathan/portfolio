@@ -12,7 +12,7 @@ import { line, lineActive, link } from "./Helpers";
 import { ProjectData } from "./components/sections/projects/ProjectData";
 import ProjectDetail from "./components/sections/projects/ProjectDetail";
 import { Toaster } from "react-hot-toast";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 const sections = ["ABOUT", "PROJECTS", "EXPERIENCE", "CONTACT"];
 
@@ -21,7 +21,6 @@ function App() {
 
   const [activeSection, setActiveSection] = useState("ABOUT");
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
-
 
   useEffect(() => {
     let observer: IntersectionObserver;
@@ -66,7 +65,7 @@ function App() {
 
   useEffect(() => {
     if (mainContent !== null) {
-      document.getElementById('detail')?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("detail")?.scrollIntoView({ behavior: "smooth" });
     }
   }, [mainContent]);
 
@@ -92,7 +91,6 @@ function App() {
   return (
     <>
       <HeroHighlight>
-
         <div className="w-screen h-screen overflow-y-auto scroll-smooth ">
           <div className="mx-auto min-h-screen max-w-screen-xl px-12 py-24 md:ps-28 sm:pe-12 sm:py-12 md:px-24 md:py-20 lg:px-24 lg:py-0 ">
             <div className="lg:flex lg:justify-between lg:gap-4 ">
@@ -109,7 +107,7 @@ function App() {
                     <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
                   </p>
                   <SocialsHorizontal />
-                  <a href="/nathan-schroeder-cv.pdf" download >
+                  <a href="/nathan-schroeder-cv.pdf" download>
                     <button className="relative  h-12 overflow-hidden rounded-lg p-[1px] hidden lg:block md:block">
                       <span className="absolute inset-[-1000%] animate-[spin_4.6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#bfdbfe_0%,#3b82f6_50%,#E2CBFF_100%)]" />
                       <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-custom-dark px-3 py-1 text-sm font-medium text-mtext-white backdrop-blur-3xl">
@@ -141,24 +139,23 @@ function App() {
                         About
                       </p>
                       <p className="text-mtext-white">
-                        Welcome to my portfolio! As a dedicated software
-                        developer and UI designer, I have a solid background in
-                        front-end development. I excel in
-                        creating sleek, user-friendly interfaces and building
-                        robust, scalable applications.
+                        Welcome to my portfolio! I'm Nathan, a software
+                        developer and UI designer with a deep passion for
+                        front-end development. I specialize in creating sleek,
+                        user-friendly interfaces that providing engaging
+                        experiences, while building scalable applications that
+                        solve real-world problems.
                         <br />
                         <br />
-                        I personally designed and crafted this portfolio using {link('react.dev', 'React')}
-                        , {link('https://tailwindcss.com/', 'Tailwindcss')} and {link('figma.com', 'Figma')} {" "}
-                        to showcase my ability to bring projects to life from concept to deployment.
-                        From the initial design phase to the development stage, I leverage various
-                        front-end frameworks and build APIs on the back-end, highlighting my commitment
-                        to quality and innovation.
+                        I ensure that every project I work on is both visually
+                        appealing and highly functional. I enjoy collaborating
+                        with others to bring creative ideas to life through
+                        powerful applications.
                         <br />
                         <br />
-                        Explore my work to see how I can deliver innovative solutions for your projects.
-                        Whether it's designing a stunning UI or developing a powerful web application,
-                        I am eager to tackle new challenges and contribute to your success.
+                        Take a look around to explore my projects. I’m always
+                        excited to take on new challenges and work on innovative
+                        solutions that can make a difference.
                       </p>
                     </section>
                     <section
@@ -235,10 +232,11 @@ function App() {
                   Portfolio designed and developed by me using{" "}
                   {link("https://figma.com", "Figma")} and{" "}
                   {link("https://code.visualstudio.com/", "Visual Studio Code")}
-                  . Built with {link("https://react.dev", "React")}, {link("https://www.typescriptlang.org/", "Typescript")}, {link("https://vitejs.dev/", "Vite")} and{" "}
+                  . Built with {link("https://react.dev", "React")},{" "}
+                  {link("https://www.typescriptlang.org/", "Typescript")},{" "}
+                  {link("https://vitejs.dev/", "Vite")} and{" "}
                   {link("https://tailwindcss.com/", "Tailwind CSS")}, and
-                  deployed on {link("https://vercel.com", "Vercel")}
-                  .
+                  deployed on {link("https://vercel.com", "Vercel")}.
                 </p>
               </main>
             </div>
