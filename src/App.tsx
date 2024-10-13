@@ -139,9 +139,9 @@ function App() {
                         About
                       </p>
                       <p className="text-mtext-white">
-                        Welcome to my portfolio! I'm Nathan, a software
+                        Welcome to my portfolio! I'm a software
                         developer and UI designer with a deep passion for
-                        front-end development. I specialize in creating sleek,
+                        software development. I specialize in creating sleek,
                         user-friendly interfaces that providing engaging
                         experiences, while building scalable applications that
                         solve real-world problems.
