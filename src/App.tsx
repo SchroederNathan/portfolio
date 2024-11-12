@@ -104,7 +104,7 @@ function App() {
                     <br /> Schroeder.
                   </h1>
                   <p className="text-4xl max-sm:text-3xl mb-5 text-white italic font-source-code-pro text-left">
-                    <ReactTyped strings={["Designer/Coder."]} typeSpeed={100} />
+                    <ReactTyped strings={["Software Developer."]} typeSpeed={100} />
                   </p>
                   <SocialsHorizontal />
                   <a href="/nathan-schroeder-cv.pdf" download>
@@ -140,10 +140,8 @@ function App() {
                       </p>
                       <p className="text-mtext-white">
                         Welcome to my portfolio! I'm a software
-                        developer and UI designer with a deep passion for
-                        software development. I specialize in creating sleek,
-                        user-friendly interfaces that providing engaging
-                        experiences, while building scalable applications that
+                        developer and UI designer. I specialize in creating
+                        user-friendly, scalable applications that
                         solve real-world problems.
                         <br />
                         <br />
@@ -155,7 +153,7 @@ function App() {
                         <br />
                         Take a look around to explore my projects. I’m always
                         excited to take on new challenges and work on innovative
-                        solutions that can make a difference.
+                        solutions that can make a difference!
                       </p>
                     </section>
                     <section
