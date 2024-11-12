@@ -13,6 +13,7 @@ import { ProjectData } from "./components/sections/projects/ProjectData";
 import ProjectDetail from "./components/sections/projects/ProjectDetail";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const sections = ["ABOUT", "PROJECTS", "EXPERIENCE", "CONTACT"];
 
@@ -104,7 +105,10 @@ function App() {
                     <br /> Schroeder.
                   </h1>
                   <p className="text-4xl max-sm:text-3xl mb-5 text-white italic font-source-code-pro text-left">
-                    <ReactTyped strings={["Software Developer."]} typeSpeed={100} />
+                    <ReactTyped
+                      strings={["Software Developer."]}
+                      typeSpeed={100}
+                    />
                   </p>
                   <SocialsHorizontal />
                   <a href="/nathan-schroeder-cv.pdf" download>
@@ -139,10 +143,9 @@ function App() {
                         About
                       </p>
                       <p className="text-mtext-white">
-                        Welcome to my portfolio! I'm a software
-                        developer and UI designer. I specialize in creating
-                        user-friendly, scalable applications that
-                        solve real-world problems.
+                        Welcome to my portfolio! I'm a software developer and UI
+                        designer. I specialize in creating user-friendly,
+                        scalable applications that solve real-world problems.
                         <br />
                         <br />
                         I ensure that every project I work on is both visually
@@ -245,6 +248,7 @@ function App() {
         <Toaster />
         <Analytics />
       </HeroHighlight>
+      <SpeedInsights />
     </>
   );
 }
