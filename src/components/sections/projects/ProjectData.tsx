@@ -4,7 +4,7 @@ export const ProjectData = [
     name: "Focus Grid",
     description: [
       "A cross platform mobile app developed with React Native and Expo. It is a habit tracking tool allowing users to visualize their progress using a Github contribution style grid.",
-      "I have always liked how Github uses a contribution grid to visualize user's coding habits. I've also been looking to create software to track my habits with a similar system but hated having to pay for the apps I tried.\n\nSo I decided to build my own!\n\nI created Focus Grid to be a simple, easy-to-use habit tracking tool that allows users to visualize their progress using a Github contribution style grid.\n\nThis was my first time building a mobile app using React Native and Expo. Even though it was new to me, with my experience in React it was extremely simple to pick up.\n\n",
+      "I have always liked how Github uses a contribution grid to visualize user's coding habits. I've also been looking to create software to track my habits with a similar system but hated having to pay for the apps I tried.\n\nSo I decided to build my own!\n\nI created Focus Grid to be a simple, easy-to-use habit tracking tool that allows users to visualize their progress using a Github contribution style grid.\n\nThis was my first time building a mobile app using React Native and Expo. Even though it was new to me, with my experience in React it was extremely simple to pick up.",
     ],
     tags: [
       "React Native",

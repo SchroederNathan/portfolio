@@ -84,17 +84,21 @@ const ProjectDetail = ({
         </a>
       ) : null}
 
-      {project.video ? (
-        <VideoPlayer videoSrc={project.video} type="video/mp4" />
+      {project.images[1] ? (
+        <a href={project.link[0]}>
+          <img className="w-full mt-6 rounded shadow" src={project.images[0]} />
+        </a>
       ) : null}
+
+
       <p className="text-mtext-white mt-6 whitespace-pre-wrap">
         {project.description[1] ?? "Loading..."}
       </p>
 
-      {project.images[1] ? (
-        <a href={project.link[0]}>
-          <img className="w-full mt-6" src={project.images[0]} />
-        </a>
+      {project.video ? (
+        <div className="mt-6 rounded overflow-hidden">
+          <VideoPlayer videoSrc={project.video} type="video/mp4" />
+        </div>
       ) : null}
 
       {project.link[0] ? (
