@@ -247,8 +247,8 @@ function App() {
         </div>
         <Toaster />
         <Analytics />
+        <SpeedInsights />
       </HeroHighlight>
-      <SpeedInsights />
     </>
   );
 }
