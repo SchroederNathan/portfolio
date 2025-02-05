@@ -1,5 +1,22 @@
 export const ProjectData = [
   {
+    images: ["images/focusgrid-preview.png", "images/focusgrid-preview.png"],
+    name: "Focus Grid",
+    description: [
+      "A cross platform mobile app developed with React Native and Expo. It is a habit tracking tool allowing users to visualize their progress using a Github contribution style grid.",
+      "I have always liked how Github uses a contribution grid to visualize user's coding habits. I've also been looking to create software to track my habits with a similar system but hated having to pay for the apps I tried.\n\nSo I decided to build my own!\n\nI created Focus Grid to be a simple, easy-to-use habit tracking tool that allows users to visualize their progress using a Github contribution style grid.\n\nThis was my first time building a mobile app using React Native and Expo. Even though it was new to me, with my experience in React it was extremely simple to pick up.\n\n",
+    ],
+    tags: [
+      "React Native",
+      "Expo",
+      "Typescript",
+      "Nativewind",
+      "App Store",
+      "Google Play",
+    ],
+    link: ["https://focusgridapp.com/"],
+  },
+  {
     images: ["images/ai-devices.png", "images/ai-devices.png"],
     name: "AI Chatbot",
     description: [
@@ -14,7 +31,10 @@ export const ProjectData = [
       "GPT-3.5 Turbo",
       "Vercel",
     ],
-    link: ["https://ai-chatbot-five-sandy.vercel.app/", "https://github.com/SchroederNathan/AI-Chatbot"]
+    link: [
+      "https://ai-chatbot-five-sandy.vercel.app/",
+      "https://github.com/SchroederNathan/AI-Chatbot",
+    ],
   },
   {
     images: ["images/footcare2you-display.png", "images/footcare2you.jpg"],
@@ -25,7 +45,7 @@ export const ProjectData = [
         "I decided to use Mantine UI for the design for clean and efficient code and to make it accessible for any users whether on mobile or desktop.",
     ],
     tags: ["React", "Typescript", "Mantine UI", "Figma", "Vercel"],
-    link: ["https://www.footcare2you.ca",]
+    link: ["https://www.footcare2you.ca"],
   },
   {
     video: "videos/H2M-Demo.mp4",
@@ -49,6 +69,6 @@ export const ProjectData = [
       "Heroku",
       "Netlify",
     ],
-    link: ["",]
+    link: [""],
   },
 ];
