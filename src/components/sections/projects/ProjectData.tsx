@@ -11,6 +11,7 @@ export const ProjectData = [
       "Expo",
       "Typescript",
       "Nativewind",
+      "Figma",
       "App Store",
       "Google Play",
     ],
