@@ -29,7 +29,7 @@ function App() {
       const options = {
         root: null,
         rootMargin: "0px",
-        threshold: 1, // Adjust the threshold as needed
+        threshold: 0.5, // Adjust the threshold as needed
       };
 
       observer = new IntersectionObserver((entries) => {
