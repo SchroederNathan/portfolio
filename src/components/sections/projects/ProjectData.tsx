@@ -1,5 +1,22 @@
 export const ProjectData = [
   {
+    images: ["images/spotify-ai-preview.png", "images/spotify-ai-preview.png"],
+    name: "Spotify AI Analytics",
+    description: [
+      "A NextJS app that analyzes your Spotify listening history and provides detailed statistics about your music taste. Features an AI chatbot powered by GPT that understands your preferences to generate personalized song recommendations and automatically create custom playlists directly on your Spotify account.",
+      "I've been wanting integrate AI into how I build my Spotify playlists. And with the Spotify API and OpenAI API, I was able to build a web app that not only shows users insights about their listening habits but also provides an intelligent music companion.\n\nThe app analyzes your Spotify data to generate recommendations based on your music taste. What makes it unique is that users can instantly add these recommendations to their Spotify library or create entire playlists with a single click.",
+    ],
+    tags: [
+      "NextJS",
+      "NextAuth",
+      "Typescript",
+      "TailwindCSS",
+      "Spotify API",
+      "OpenAI API",
+    ],
+    link: ["https://soundlytics-drab.vercel.app/", "https://github.com/SchroederNathan/Spotify-AI" ],
+  },
+  {
     images: ["images/focusgrid-preview.png", "images/focusgrid-preview.png"],
     name: "Focus Grid",
     description: [
