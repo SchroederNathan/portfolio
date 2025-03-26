@@ -14,7 +14,10 @@ export const ProjectData = [
       "Spotify API",
       "OpenAI API",
     ],
-    link: ["https://soundlytics-drab.vercel.app/", "https://github.com/SchroederNathan/Spotify-AI" ],
+    link: [
+      "https://soundlytics-drab.vercel.app/",
+      "https://github.com/SchroederNathan/Spotify-AI",
+    ],
   },
   {
     images: ["images/focusgrid-preview.png", "images/focusgrid-preview.png"],
@@ -53,17 +56,6 @@ export const ProjectData = [
       "https://ai-chatbot-five-sandy.vercel.app/",
       "https://github.com/SchroederNathan/AI-Chatbot",
     ],
-  },
-  {
-    images: ["images/footcare2you-display.png", "images/footcare2you.jpg"],
-    name: "Footcare2You",
-    description: [
-      "A freelanced web app for a medical foot service provider. Featuring a contact form, Google Map, and detailed service info, showcasing my skills in modern web design and development using Figma and React.",
-      "Footcare2You is a web app built with React to market and sell medical foot care services. I developed prototypes for the client using Figma to ensure they were happy with the end product. \n\nThe app features a contact form, an Interactive Google Map using Google Maps API, and detailed information about the services provided. " +
-        "I decided to use Mantine UI for the design for clean and efficient code and to make it accessible for any users whether on mobile or desktop.",
-    ],
-    tags: ["React", "Typescript", "Mantine UI", "Figma", "Vercel"],
-    link: ["https://www.footcare2you.ca"],
   },
   {
     video: "videos/H2M-Demo.mp4",

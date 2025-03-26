@@ -203,13 +203,13 @@ function App() {
                         />
 
                         <Work
-                          date={"2019 - 2024"}
-                          position={"Assistant Manager"}
-                          company={"Imagine Cinemas"}
+                          date={"2025 - Present"}
+                          position={"Mobile App Developer"}
+                          company={"Red Piston"}
                           description={
-                            "I have successfully led and managed a team with efficiency and cooperation, demonstrating strong skills in communication, organization, management, and leadership to foster a positive environment for a theatre team. Furthermore, I thrive in fast-paced environments, ensuring effective performance under pressure."
+                            ""
                           }
-                          link={"https://imaginecinemas.com/"}
+                          link={"https://redpiston.com/"}
                         />
                       </ol>
                     </section>

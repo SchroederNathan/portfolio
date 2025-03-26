@@ -26,8 +26,8 @@ const Work = ({ date, position, company, description, link }: Props) => {
                                 <path d="M8 7l9 0l0 9" />
                             </svg>
                         </p>
-                        <p className='text-mtext-white/60 font-semibold'>{company}</p>
-                        <p className='text-mtext-white mt-3'>{description}</p>
+                        <p className='text-mtext-white/60 font-semibold mb-3'>{company}</p>
+                        <p className='text-mtext-white '>{description}</p>
 
                     </main>
                 </div >
